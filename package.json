@@ -5,7 +5,9 @@
   "author": "LOBA",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp final --production"
+    "build": "gulp final --production",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [
     "Frontend Starter",
@@ -15,6 +17,13 @@
   "devDependencies": {
     "@babel/core": "^7.22.19",
     "@babel/preset-env": "^7.22.15",
+    "@chromatic-com/storybook": "^3.2.3",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/html": "^8.4.7",
+    "@storybook/html-vite": "^8.4.7",
+    "@storybook/test": "^8.4.7",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -28,6 +37,7 @@
     "gulp-uglify": "^3.0.2",
     "node-notifier": "^10.0.1",
     "sass": "^1.67.0",
+    "storybook": "^8.4.7",
     "webpack": "^5.88.2",
     "webpack-stream": "^7.0.0"
   },
