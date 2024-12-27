@@ -1,0 +1,201 @@
+/* Barra cookies */
+
+
+.cookies{
+	&__wrapper {
+		--#{$prefix}modal-width: 600px;
+	
+		--#{$prefix}offcanvas-height: initial;
+		--#{$prefix}offcanvas-padding-y: .5rem;
+	
+	
+		font-size: $font-size-sm;
+		.btn {
+			@include max-sm {
+				display: block;
+				width: 100%;
+			}
+
+			&.btn-primary{
+				margin: 0 0 10px 0;
+
+				&:hover{
+					background-color: #0047BB;
+					color: #FFED00;
+				}
+			}
+		}
+
+      .cookies__settings-link{
+         padding: 0;
+      }
+
+	  .modal-title{
+		color: #0047BB;
+	  }
+
+      .modal-content{
+         border-radius: 20px;
+      }
+
+      .form-check{
+         label{
+            display: none;
+         }
+      }
+
+	 	legend{
+			&.visually-hidden{
+				font-size: 18px;
+				margin: 0 0 20px 0;
+			}
+		}
+
+		.cookies__cancel {
+			float: right;
+			border: 1px solid;
+		}
+
+		.cookies__settings-link{
+			&:hover{
+				color: #0047BB;
+			}
+		}
+	}
+
+	&__message {
+		display: block;
+		margin-bottom: 0;
+		font-size: 1em;
+		line-height: 1.6;
+	
+		.btn-link{
+			--#{$prefix}btn-padding-x: 0;
+			--#{$prefix}btn-padding-y: 0;
+			--#{$prefix}btn-font-size: inherit;
+			--#{$prefix}btn-font-weight: inherit;
+			--#{$prefix}btn-line-height: inherit;
+			--#{$prefix}btn-color: inherit;
+	
+			--#{$prefix}btn-border-width: 0;
+			  --#{$prefix}btn-border-radius: 0;
+	
+			margin: 0;
+			display: inline;
+			vertical-align: unset;
+			width: auto;
+         color: $color-primary;
+		}
+	
+		p{
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__settings{
+		.accordion{
+			--#{$prefix}accordion-border-radius: 0;
+			&-item{
+				margin-bottom: .375rem;
+				border: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
+			}
+			&-button{
+				--#{$prefix}accordion-active-color: var(--#{$prefix}accordion-btn-color);
+				--#{$prefix}accordion-active-bg: var(--#{$prefix}accordion-btn-bg);
+				padding-right: 4.5rem;
+				box-shadow: none;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				@include max-sm{
+					font-size: $font-size-sm;
+				}
+				&:after{
+					background-image: var(--#{$prefix}accordion-btn-icon);
+					margin-left: 0;
+					margin-right: $spacer;
+				}
+			}
+			&-body{
+				padding: 10px 0;
+			}
+			.form-check {
+				position: absolute;
+				right: 0;
+				top: 25px;
+				transform: translateY(-50%);
+				padding: 0;
+				z-index: 3;
+
+				input{
+					opacity: 1;
+
+					&::before{
+						display: block;
+						content: '';
+						width: 20px;
+						height: 20px;
+						border:1px solid;
+						border-radius: 3px;
+						position: absolute;
+						top: 0;
+						background: #fff;
+					}
+
+					&:checked:after{
+						display: block;
+						content: '';
+						width: 14px;
+						height: 14px;
+						border: none;
+						border-radius: 3px;
+						position: absolute;
+						top: 3px;
+						background: #0047BB;
+						left: 3px;
+					}
+				}
+			}
+
+			.accordion-button{
+				width: 100%;
+				text-align: left;
+				padding: 0;
+				border: none;
+				background: transparent;
+				font-size: 20px;
+				padding: 0 25px 0 0;
+
+				@include max-sm{
+					font-size: 17px;
+				}
+
+				i{
+					transform: rotate(90deg);
+					display: inline-flex;
+					font-size: 15px;
+					margin-right: 10px;
+					transition: 0.3s linear;
+
+					@include max-sm{
+						font-size: 11px;
+					}
+				}
+
+				&[aria-expanded="true"]{
+					i{
+						transform: rotate(270deg);
+						transition: 0.3s linear;
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal-backdrop {
+   display: none;
+}
+
+/* Barra cookies END */

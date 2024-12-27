@@ -1,0 +1,39 @@
+{
+  "name": "starter-frontend",
+  "version": "1.6.0",
+  "description": "Starter to init projects frontend",
+  "author": "LOBA",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp final --production"
+  },
+  "keywords": [
+    "Frontend Starter",
+    "LOBA.cx"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.16.0",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dependents": "^1.2.5",
+    "gulp-inject": "^5.0.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.1",
+    "gulp-uglify": "^3.0.2",
+    "node-notifier": "^9.0.0",
+    "webpack": "^4.46.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.3",
+    "popper.js": "^1.16.1"
+  }
+}
