@@ -4,8 +4,7 @@
 
 const gulp = require("gulp"),
 			plumber = require("gulp-plumber"),
-			inject = require("gulp-inject"),
-			sass = require("gulp-sass"),
+			sass = require("gulp-sass")(require("sass")),
 			autoprefixer = require("gulp-autoprefixer"),
 			minifyCss = require("gulp-clean-css"),
 			babel = require("gulp-babel"),
@@ -75,56 +74,6 @@ const browsersync = (done) => {
 		port: port,
 	});
 	done();
-};
-
-// Compile files PHP
-const compilePHP = () => {
-	const src = ["./assets/js/app.js", "./assets/css/main.css"];
-	var sources = gulp.src(src, { read: false }, { relative: true });
-	return (
-		gulp
-			.src("./**/*.php")
-			.pipe(
-				inject(sources, {
-					ignorePath: "dist/",
-					addRootSlash: false,
-					addPrefix: "..",
-					transform: transform,
-				})
-			)
-			// .pipe(debug())
-			.pipe(
-				gulp.dest(function (file) {
-					return file.base;
-				})
-			)
-	);
-};
-
-// Compile files PHP
-const compilePHPFinal = () => {
-	const src = ["./assets/js/app.min.js", "./assets/css/main.min.css"];
-
-	var sources = gulp.src(src, { read: false }, { relative: true });
-
-	return (
-		gulp
-			.src("./**/*.php")
-			.pipe(
-				inject(sources, {
-					ignorePath: "dist/",
-					addRootSlash: false,
-					addPrefix: "..",
-					transform: transform,
-				})
-			)
-			// .pipe(debug())
-			.pipe(
-				gulp.dest(function (file) {
-					return file.base;
-				})
-			)
-	);
 };
 
 const style = () => {
@@ -266,11 +215,11 @@ const watchFiles = () => {
 // TASKS
 const serve = browsersync;
 
-const final = gulp.series(vendor, styleFinal, scriptsFinal, compilePHPFinal, notifyFinal);
+const final = gulp.series(vendor, styleFinal, scriptsFinal, notifyFinal);
 const devScss = gulp.series(style, notifyCSS);
 const dev = gulp.series(scripts, notifyJS);
 const watch = gulp.parallel(watchFiles, notifyGulp);
-const defaults = gulp.series(compilePHP, gulp.parallel(watch, serve));
+const defaults = gulp.series(gulp.parallel(watch, serve));
 
 exports.default = defaults;
 exports.final = final;
