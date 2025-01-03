@@ -4,7 +4,7 @@ import { createButton } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Example/Button',
+  title: 'Componentes/Button',
   tags: ['autodocs'],
   render: ({ label, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
@@ -12,13 +12,15 @@ export default {
     return createButton({ label, ...args });
   },
   argTypes: {
-    backgroundColor: { control: 'color' },
-    label: { control: 'text' },
-    onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
-    size: {
+    link: { control: 'text' },
+    icon: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+    },
+    label: { control: 'text' },
+    variant: {
+      control: { type: 'select' },
+      options: ['primary', 'primary-yellow', 'secondary', 'secondary-yellow','underline', 'circle', 'circle-yellow'],
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -28,27 +30,47 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
-    label: 'Button',
+   variant: 'primary',
+   icon: 'arrow',
+   label: 'Know more',
+  },
+};
+
+export const PrimaryYellow = {
+  args: {
+   variant: 'primary-yellow',
+   icon: 'plus',
+   label: 'Know more',
   },
 };
 
 export const Secondary = {
   args: {
-    label: 'Button',
+   variant: 'secondary',
+   label: 'Know more',
   },
 };
 
-export const Large = {
+export const SecondaryYellow = {
   args: {
-    size: 'large',
-    label: 'Button',
+   variant: 'secondary-yellow',
+   icon: 'send',
+   label: 'Know more ',
   },
 };
 
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};
+export const Underline = {
+   args: {
+    variant: 'underline',
+    label: 'Know more',
+   },
+ };
+
+ export const Circle = {
+   args: {
+      variant: 'circle',
+      label: '',
+      icon: 'arrow',
+   },
+ };
+

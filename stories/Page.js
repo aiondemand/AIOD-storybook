@@ -1,5 +1,6 @@
 import { createHeader } from './Header';
 import './page.css';
+import "https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap";
 
 export const createPage = () => {
   const article = document.createElement('article');

@@ -100,6 +100,10 @@
             <a href="" class="btn btn-default">Know more <i class="icon-plus"></i></a>
          </div>
          <div class="col-12 col-md-4 mt-5">
+            <p class="label">Default Yellow</p>
+            <div class="btn btn-default btn-default--yellow">Know more <i class="icon-plus"></i></div>
+         </div>
+         <div class="col-12 col-md-4 mt-5">
             <p class="label">Scroll</p>
             <a href="#" aria-label="Scroll to Next Section" class="btn btn-primary hero-btn-scroll"><i class="icon-arrow"></i></a>
          </div>
