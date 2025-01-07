@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.footer-button h2{
+   font-family: "Jura", sans-serif !important;
+   font-size: 37px;
+}
+
+.footer-button {
+   padding: 0 60px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}

@@ -86,7 +86,7 @@ export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
                               <img src="../assets/img/user-image.jpeg" alt="">
                               <span class="notifications">1</span>
                            </a>
-                           <span>Nuno <br> Alves</span>
+                           <span>${user.name}</span>
                         </div>` : 
                         `<a href="undefined" class="btn btn-default btn-user">Log In</a>`
                         }

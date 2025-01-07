@@ -28,7 +28,21 @@ export default {
    variant: {
       control: { type: 'select' },
       options: ['advertise', 'arrows','buttons'],
-    },
+   },
+   linkCircle: { control: 'text' },
+   label: { control: 'text' },
+   link: { control: 'text' },
+   icon: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+   labelYellow: { control: 'text' },
+   linkYellow: { control: 'text' },
+   iconYellow: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+
 
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -59,6 +73,8 @@ export const advertise = {
       money: '44,5k',
       download: '14k',
       variant: "arrows",
+      linkCircle: "#",
+      icon: "arrow-back",
    },
  };
 
@@ -69,6 +85,12 @@ export const advertise = {
       title: 'Summarization experiment',
       date: new Date(),
       variant: "buttons",
+      icon: "plus",
+      label: "Go to detail",
+      iconYellow: "arrow",
+      labelYellow: "Show more",
+      link:"#",
+      linkYellow:"#2",
    },
  };
 

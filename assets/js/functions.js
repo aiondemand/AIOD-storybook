@@ -1,5 +1,5 @@
 "use strict";
-import { Modal } from "bootstrap";
+
 import "jquery-validation";
 window.jQuery = $;
 window.$ = $;
@@ -160,206 +160,200 @@ export const closeRGPD = (closeClass) => {
 | Cookies functions
 |--------------------------------------------------
 */
-const cookiesPrefix = "loba_";
+export const createCookie = (name, value, days) => {
+   // Condition to check if already exists a
+   // different cookie and erase it to create a new one
+   console.log(name);
+   name.forEach((cookie) => {
+      const cookieValue = "eucookie-" + cookie.value;
+      readCookie("eucookie-required") && cookieValue != "eucookie-required" ? eraseCookie("eucookie-required") : "";
+      readCookie("eucookie-functional") && cookieValue != "eucookie-functional" ? eraseCookie("eucookie-functional") : "";
+      readCookie("eucookie-analytical") && cookieValue != "eucookie-analytical" ? eraseCookie("eucookie-analytical") : "";
+   });
 
-export const createCookie = (value, days) => {
-	// If value is an array of cookies from inputs loop and refresh
-	// otherwise just refresh the cookie by its name
-	if(NodeList.prototype.isPrototypeOf(value)){
-		value.forEach((cookie) => {
-			const cookieValue = cookiesPrefix + cookie.value;
-			refreshCokkie(cookieValue);
-		});
-	}else{
-		refreshCokkie(value);
-	}
+   value.forEach((cookie) => {
+      const cookieValue = "eucookie-" + cookie.value;
+      if (days) {
+         var date = new Date();
+         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+         var expires = "; expires=" + date.toGMTString();
+      } else {
+         var expires = "";
+      }
 
-	function refreshCokkie(cookieValue) {
-		let expires;
-		if (days) {
-			let date = new Date();
-			date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-			expires = "; expires=" + date.toGMTString();
-		} else {
-			expires = "";
-		}
-
-		document.cookie = cookieValue + "=" + true + expires + "; path=/";
-	}
+      document.cookie = cookieValue + "=" + cookieValue + expires + "; path=/";
+   });
 };
 
 export const readCookie = (name) => {
-	let nameEQ = name + "="
-	let cookies = document.cookie.split(";")
-	let readCookie = false
-	cookies.forEach((cookie) => {
-		while (cookie.startsWith(" ")) {
-			cookie = cookie.substring(1, cookie.length)
-		}
-		if (cookie.startsWith(nameEQ)) {
-			readCookie = true
-		}
-	})
-	return readCookie
+   var nameEQ = name + "=";
+   var ca = document.cookie.split(";");
+   for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == " ") {
+         c = c.substring(1, c.length);
+      }
+      if (c.indexOf(nameEQ) == 0) {
+         // return c.substring(nameEQ.length, c.length);
+         return true;
+      }
+   }
+   return null;
 };
 
-export const readCookiePermissions = (cookiesRadios) => {
-	cookiesRadios.forEach((cookieRadio) => {
-		if(readCookie(cookiesPrefix + cookieRadio.value)){
-			const scripts = document.querySelectorAll('script[type="text/plain"][data-assigned-cookie="'+cookieRadio.value+'"]')
-			scripts.forEach(script => {
-				const newScript = script.cloneNode(true);
-				newScript.removeAttribute('type');
-				script.parentNode.replaceChild(newScript, script);
-			})
-			const embeds = document.querySelectorAll('.embed--no-consent[data-assigned-cookie="'+cookieRadio.value+'"]')
-			embeds.forEach(embed => {
-				embed.classList.remove('embed--no-consent')
-				const iframe = embed.querySelector('iframe')
-				if(!iframe) return;
-				iframe.src = iframe.dataset.src
-			})
-		}
-	});
+export const readCookiePermissions = () => {
+   // JS code if user accepted only minimum required cookies
+
+   if (readCookie("eucookie-required" || readCookie("eucookie-functional") || readCookie("eucookie-analytical"))) {
+      // JS code if user accepted only functional cookies
+
+      if (readCookie("eucookie-required") || readCookie("eucookie-functional")) {
+         // JS code if user accepted all cookies
+
+         if (readCookie("eucookie-analytical")) {
+            if (typeof analyticsCode !== "undefined" && analyticsCode !== null) {
+               // Load Google Analytics Code
+               (function (b, o, i, l, e, r) {
+                  b.GoogleAnalyticsObject = l;
+                  b[l] ||
+                     (b[l] = function () {
+                        (b[l].q = b[l].q || []).push(arguments);
+                     });
+                  b[l].l = +new Date();
+                  e = o.createElement(i);
+                  r = o.getElementsByTagName(i)[0];
+                  e.src = "https://www.google-analytics.com/analytics.js";
+                  r.parentNode.insertBefore(e, r);
+               })(window, document, "script", "ga");
+               ga("create", analyticsCode, "auto", {
+                  anonymizeIp: true,
+               });
+               ga("send", "pageview");
+               // End Google Analytics Code
+            }
+
+            if (typeof fbPixelCode !== "undefined" && fbPixelCode !== null) {
+               // Facebook Pixel Code
+               !(function (f, b, e, v, n, t, s) {
+                  if (f.fbq) return;
+                  n = f.fbq = function () {
+                     n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+                  };
+                  if (!f._fbq) f._fbq = n;
+                  n.push = n;
+                  n.loaded = !0;
+                  n.version = "2.0";
+                  n.queue = [];
+                  t = b.createElement(e);
+                  t.async = !0;
+                  t.src = v;
+                  s = b.getElementsByTagName(e)[0];
+                  s.parentNode.insertBefore(t, s);
+               })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+               fbq("init", fbPixelCode);
+               fbq("track", "PageView");
+               // End Facebook Pixel Code
+            }
+
+            if (typeof tagManagerCode !== "undefined" && tagManagerCode !== null) {
+               (function (w, d, s, l, i) {
+                  w[l] = w[l] || [];
+                  w[l].push({
+                     "gtm.start": new Date().getTime(),
+                     event: "gtm.js",
+                  });
+                  var f = d.getElementsByTagName(s)[0],
+                     j = d.createElement(s),
+                     dl = l != "dataLayer" ? "&l=" + l : "";
+                  j.async = true;
+                  j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                  f.parentNode.insertBefore(j, f);
+               })(window, document, "script", "dataLayer", tagManagerCode);
+            }
+         }
+         // cookie-complete code
+      }
+      // cookie-functional code
+   }
 };
 
-export const eraseCookies = () => {
-	let cookies = document.cookie.split(";");
-	cookies.forEach((cookie) => {
-		let cookieName = cookie.replace(' ','').split("=")[0];
-		createCookie(cookieName, -1);
-	});
+export const eraseCookie = (name) => {
+   createCookie(name, "", -1);
 };
 
-export const initCookiesListener = function(cookiesWrapperSelector, changeCookiesSelector) {
-	const cookiesWrapper = document.querySelector(cookiesWrapperSelector),
-		changeCookies = document.querySelectorAll(changeCookiesSelector),
-		cookiesRadios = document.querySelectorAll('input[name=cookie-radio]'),
-		acceptCookiesBtn = document.querySelector('.cookies__accept'),
-		denyCookiesBtn = document.querySelector('.cookies__deny'),
-		submitCookiesPreferencesBtn = document.querySelector('.cookies__submit'),
-		cookiesDescription = document.querySelector('.cookies__description'),
-		cookiesSettings = document.querySelector('.cookies__settings'),
-		cookiesSettingsLink = document.querySelector('.cookies__settings-link'),
-		cookiesCancel = document.querySelector('.cookies__cancel');
-	
-	if (!cookiesWrapper) {
-		console.log('Cookies Box is missing!')
-		return;
-	};
-	
-	let cookiesModal;
-	if (cookiesWrapper.classList.contains('modal')) {
-		cookiesModal = new Modal(cookiesWrapper, {
-			backdrop: 'static', // Impede o fechamento quando clicado fora do modal
-			keyboard: false // Impede o fechamento quando a tecla ESC é pressionada
-		});
-	} else {
-		cookiesModal = new Offcanvas(cookiesWrapper);
-	}
+export const cookiesListener = (
+   cookiesWrapperClass,
+   changeCookiesClass,
+   cookiesRadiosClass,
+   acceptedCookiesYes,
+   acceptedCookiesClass,
+   cookieSettingsClass,
+   cookieSettingsCancelClass
+) => {
+   const cookiesWrapper = document.querySelector(cookiesWrapperClass),
+      changeCookies = document.querySelector(changeCookiesClass),
+      bodyElem = document.querySelector("body"),
+      cookiesRadios = document.querySelectorAll(cookiesRadiosClass),
+      acceptedCookiesAccepted = document.querySelector(acceptedCookiesYes),
+      acceptedCookiesPreferences = document.querySelector(acceptedCookiesClass);
 
-	window.dataLayer = window.dataLayer || [];
-	function gtag() {dataLayer.push(arguments);}
-	window.gtag = gtag;
+   // Show Cookies if not accepted already
+   if (!readCookie("eucookie-functional") && !readCookie("eucookie-analytical") && !readCookie("eucookie-required")) {
+      cookiesWrapper.style.display = "block";
+      bodyElem.classList.add("in-modal");
+   } else {
+      readCookiePermissions();
+   }
 
-	if(localStorage.getItem('consentMode') === null){
-		gtag('consent', 'default', {
-			'ad_storage': 'denied',
-			'analytics_storage': 'denied',
-			'personalization_storage': 'denied',
-			'functionality_storage': 'denied',
-			'security_storage': 'denied',
-		})
-	}else{
-		gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
-	}
-
-	// Show Cookies if not accepted already
-	if (!readCookie(cookiesPrefix + "required")) {
-		eraseCookies();
-		cookiesModal.show();
-		document.body.style.overflow = "";
-		document.body.style.paddingRight = "";
-	} else {
-		readCookiePermissions(cookiesRadios);
-	}
-
-	changeCookies.forEach((button) => {
-		button.addEventListener("click", function (e) {
-			e.preventDefault();
-			eraseCookies();
-			cookiesModal.show();
-			document.body.style.overflow = "";
-			document.body.style.paddingRight = "";
-		});
-	})
-
-	if (acceptCookiesBtn) {
-      acceptCookiesBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          const cookieVal = document.querySelectorAll('input[name=cookie-radio]');
-          submitPreferences(cookieVal);
+   if (changeCookies) {
+      changeCookies.addEventListener("click", function (e) {
+         e.preventDefault();
+         cookiesWrapper.style.display = "block";
       });
    }
 
-	// Deny all Cookies (except required)
-	if (denyCookiesBtn) {
-      denyCookiesBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          const cookieVal = document.querySelectorAll('#cookie-required');
-          submitPreferences(cookieVal);
+   // Listen for changes on Cookies radios
+   for (var i = 0; i < cookiesRadios.length; i++) {
+      var cookieRadio = cookiesRadios[i];
+
+      cookieRadio.addEventListener("change", function () {
+         var cookieID = this.id;
+
+         // get all messages to dismiss them
+         var cookiesMessages = document.querySelectorAll(".cookies-message p");
+         for (var j = 0; j < cookiesMessages.length; j++) {
+            cookiesMessages[j].style.display = "none";
+         }
+
+         // show the message of the selected cookie
+         document.querySelector('.cookies-message p[data-id="' + cookieID + '"]').style.display = "block";
       });
    }
-  
-	// Submit preferences
-	if (submitCookiesPreferencesBtn) {
-      submitCookiesPreferencesBtn.addEventListener("click", function (e) {
-          e.preventDefault();
-          const cookieVal = document.querySelectorAll('input[name=cookie-radio]:checked');
-          submitPreferences(cookieVal);
-      });
-   }
 
-	function submitPreferences(cookieVal) {
-		createCookie(cookieVal, 365 * 10);
-		readCookiePermissions(cookiesRadios);
-		cookiesModal.hide();
-		setConsent();
-	}
+   // Click to accept and close cookies
+   acceptedCookiesAccepted.addEventListener("click", function (e) {
+      e.preventDefault();
+      const cookieVal = document.querySelectorAll('input[name="cookie-radio"]:checked');
+      createCookie(cookieVal, cookieVal, 365 * 10);
+      readCookiePermissions();
+      cookiesWrapper.style.display = "none";
+      bodyElem.classList.remove("in-modal");
+   });
 
-	// open and close cookies preferences
-	if (cookiesSettingsLink) {
-      cookiesSettingsLink.addEventListener("click", function (e) {
-          e.preventDefault();
-          cookiesDescription.classList.toggle('d-none');
-          cookiesSettings.classList.toggle('d-none');
-      });
-   }
-  
-	if (cookiesCancel) {
-      cookiesCancel.addEventListener("click", function (e) {
-          e.preventDefault();
-          cookiesDescription.classList.toggle('d-none');
-          cookiesSettings.classList.toggle('d-none');
-      });
-   }
-  
+   acceptedCookiesPreferences.addEventListener("click", function (e) {
+      e.preventDefault();
+      const cookieVal = document.querySelectorAll('input[name="cookie-radio"]:checked');
+      createCookie(cookieVal, cookieVal, 365 * 10);
+      readCookiePermissions();
+      cookiesWrapper.style.display = "none";
+      bodyElem.classList.remove("in-modal");
+   });
 
-
-
+   // open and close cookies preferences
+   $(`${cookieSettingsClass}, ${cookieSettingsCancelClass}`).on("click", function (e) {
+      $(".cookies-description, .cookies-settings").toggle();
+   });
 };
-
-export const setConsent = () => {
-	const consentMode = {
-		'ad_storage': readCookie(cookiesPrefix + "ad") ? 'granted' : 'denied',
-		'analytics_storage': readCookie(cookiesPrefix + "analytics") ? 'granted' : 'denied',
-		'personalization_storage': readCookie(cookiesPrefix + "personalization") ? 'granted' : 'denied',
-		'functionality_storage': readCookie(cookiesPrefix + "functionality") ? 'granted' : 'denied',
-		'security_storage': readCookie(cookiesPrefix + "security") ? 'granted' : 'denied',
-	}
-	gtag('consent', 'update', consentMode);
-	localStorage.setItem('consentMode', JSON.stringify(consentMode));
-}
 
 /**
 |--------------------------------------------------

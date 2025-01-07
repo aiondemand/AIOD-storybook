@@ -23,7 +23,13 @@ export default {
       control: { type: 'select' },
       options: ['big-numbers', 'positions','services', 'highlight'],
     },
-
+   link: { control: 'text' },
+   linkCircle: { control: 'text' },
+   icon: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+   label: { control: 'text' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -35,7 +41,7 @@ export const bigNumbers = {
       category: 'AI models',
       number: '15791',
       variant: 'big-numbers',
-
+      linkCircle: '#',
   },
 };
 
@@ -47,6 +53,10 @@ export const bigNumbers = {
       title: 'MyLibrary',
       text: 'Research and Innovative <br> AI Lab',
       variant: "services",
+      link: '#',
+      icon: 'arrow',
+      label: 'Know more',
+      linkCircle: '#2',
    },
  };
 
@@ -54,8 +64,12 @@ export const bigNumbers = {
  export const highlight = {
    args: {
       category: 'Check all available education resources',
-      title: 'Educational Resources',
+      title: 'Educational <br> Resources',
       variant: "highlight",
+      linkCircle: '#2',
+      link: '#',
+      icon: 'arrow',
+      label: 'Available for you',
    },
  };
 

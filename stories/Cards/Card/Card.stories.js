@@ -16,18 +16,25 @@ export default {
    tag: { control: 'text' },
    title: { control: 'text' },
    text: { control: 'text' },
-   image: { control:  'text' } ,
+   image: { control: { type: 'file', accept: '.png, .jpeg' } } ,
    imageAlt: { control: 'text' },
    category: { control: 'text' },
    date: { control: 'date' },
    variant: {
       control: { type: 'select' },
-      options: ['primary', 'news', 'big-numbers', 'positions','general-services', 'aiod-services', 'big-highlight'],
+      options: ['primary', 'news'],
     },
+   link: { control: 'text' },
+   icon: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+   label: { control: 'text' },
 
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
+   args: { onClick: fn() },
+
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -40,6 +47,9 @@ export const primary = {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
       variant: 'primary',
       date: new Date(),
+      link: '#',
+      icon: 'plus',
+      label: 'Know more',
 
   },
 };
@@ -47,12 +57,15 @@ export const primary = {
  
  export const news = {
    args: {
-      image: "../assets/img/card-image.jpeg",
+      image: ["../../../assets/img/card-image.jpeg"],
       imageAlt: 'Practitioners Portal',
       tag: 'Categorie here',
       title: 'Title here',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ',
       date: new Date(),
       variant: "news",
+      link: '#',
+      icon: 'plus',
+      label: 'Know more',
    },
  };

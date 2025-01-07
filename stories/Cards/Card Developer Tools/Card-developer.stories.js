@@ -15,13 +15,13 @@ export default {
   },
   argTypes: {
    title: { control: 'text' },
-   image: { control:  'text' } ,
+   image: { control: { type: 'file', accept: '.png, .jpeg' } } ,
    imageAlt: { control: 'text' },
    list: { control: 'object' },
    link: { control: 'text' },
    icon: {
-   control: { type: 'select' },
-   options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
    },
    label: { control: 'text' },
   },
@@ -32,7 +32,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const CardDeveloper = {
   args: {
-    image: 'https://aiod.dev.loba.com/wp-content/uploads/2023/06/developer-tools2-1.png',
+      image: ["../../../assets/img/developer-tools2.png"],
     imageAlt: 'Developer Tools',
     title: "Virtual Lab",
     list:{
@@ -40,6 +40,9 @@ export const CardDeveloper = {
       "2": "Reduce costs",
       "3": "Save time",
       "4": " Integrate your project with the AIoD domain"
-    }
+    },
+    link: '#',
+    icon: 'arrow',
+    label: 'Download',
   },
 };

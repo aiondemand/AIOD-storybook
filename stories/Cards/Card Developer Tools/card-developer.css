@@ -4,3 +4,7 @@
 .product-list-developer-card{
    margin-top: 0 !important;
 }
+
+#story--componentes-cards-card-developer--card-developer--primary{
+   max-width: 450px !important;
+ }

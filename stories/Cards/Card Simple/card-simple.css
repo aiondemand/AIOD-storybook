@@ -4,3 +4,10 @@
 .card-news{
    font-family: "Montserrat", sans-serif;
 }
+
+#story--componentes-cards-card-simple--big-numbers,
+#story--componentes-cards-card-simple--big-numbers--primary,
+#story--componentes-cards-card-simple--services,
+#story--componentes-cards-card-simple--highlight{
+   max-width: 300px !important;
+ }

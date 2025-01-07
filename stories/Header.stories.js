@@ -4,8 +4,9 @@ import { createHeader } from './Header';
 
 export default {
   title: 'Componentes/Header',
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
+
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   render: (args) => createHeader(args),
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
@@ -21,7 +22,7 @@ export default {
 export const LoggedIn = {
   args: {
     user: {
-      name: 'Jane Doe',
+      name: 'Nuno Alves',
     },
   },
 };

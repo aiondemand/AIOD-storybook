@@ -13,7 +13,14 @@ export const createCardHorizontal = ({
    badge,
    money,
    download,
-   tag
+   tag,
+   linkCircle,
+   icon,
+   iconYellow,
+   link,
+   linkYellow,
+   label,
+   labelYellow
 
 }) => {
   const cardHorizontal = document.createElement('div');
@@ -102,12 +109,13 @@ export const createCardHorizontal = ({
                   </div>` 
                   : ''}
                   <div class="d-flex">
-                     <a href="" class="btn btn-circle btn-circle--blue ml-2">
+                     <div class="btn btn-circle btn-circle--blue ml-2">
                         <i class="icon-resources-saved"></i>
-                     </a>
-                     <a href="" class="btn btn-circle btn-circle--yellow ml-2">
-                        <i class="icon-arrow-back"></i>
-                     </a>
+                     </div>
+                     ${linkCircle ? `<a href="${linkCircle}" class="btn btn-circle btn-circle--yellow ml-2">
+                        <i class="icon-${icon}"></i>
+                     </a>` 
+                  : ''}
                   </div>
                </div>
             </div>
@@ -130,9 +138,8 @@ export const createCardHorizontal = ({
                ${date ? `<div class="date">${formattedDate}</div>` : ''}
             </div>
             <div>
-               <a href="" title="" class="btn btn-default btn-default--yellow" target="_blank">Show more <i class="icon-arrow"></i></a>
-               <a href="" title="" class="btn btn-default  ms-3" target="_blank">Go to detail<i class="icon-arrow"></i></a>
-               
+               ${linkYellow ? `<a href="${linkYellow}" class="btn btn-default btn-default--yellow">${labelYellow} <i class="icon-${iconYellow}"></i></a>` : ""}
+               ${link ? `<a href="${link}" class="btn btn-default  ms-3">${label} <i class="icon-${icon}"></i></a>` : ""}
             </div>
 
          

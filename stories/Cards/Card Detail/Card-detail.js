@@ -6,16 +6,20 @@ export const createCardDetail = ({
   imageAlt,
   number,
   list,
-  text
+  text,
+  link,
+  icon,
+  label,
 }) => {
   const cardDetail = document.createElement('div');
-  cardDetail.className = ['product-list-link'].join(' ');
+  cardDetail.className = ['product-list'].join(' ');
 
   const listHTML = Object.values(list).length > 0 
   ? Object.values(list).map((item) => `<li>${item}</li>`).join('') 
   : '';
 
   cardDetail.innerHTML = `
+  <div class="product-list-link">
    <div class="row">
       <div class="col-12 col-lg-1 offset-lg-1">
          <span class="product-list-number">${number}</span>
@@ -27,10 +31,11 @@ export const createCardDetail = ({
          <ul class="unordered-list">
             ${listHTML}
          </ul>
-         <div class="btn btn-default btn-default--yellow">Know more <i class="icon-plus"></i></div>
+         ${link ? `<a href="${link}" class="btn btn-default btn-default--yellow">${label} <i class="icon-${icon}"></i></a>` : ""}
       </div>
       <div class="col-12 col-lg-3 d-none d-lg-block">
           <img class="w-100" src="${image}" alt="${imageAlt}"
+      </div>
       </div>
    </div>`
 

@@ -5,6 +5,9 @@ export const createCardProducts = ({
   title,
   imageAlt,
   content,
+  link,
+  icon,
+  label,
 }) => {
   const cardProducts = document.createElement('div');
   cardProducts.className = ['featured-products-item'].join(' ');
@@ -12,9 +15,7 @@ export const createCardProducts = ({
   <img src="../assets/img/${image}.svg" alt="${imageAlt}">
   <div class="featured-products-item-title">${title}</div>
   <p>${content}</p>
-  <div>
-      <a href="#" class="btn btn-default">Know more <i class="icon-arrow"></i></a>
-   </div>`
+  ${link ? `<div><a href="${link}" class="btn btn-default">${label} <i class="icon-${icon}"></i></a></div>` : ""}`
 
   return cardProducts;
 };

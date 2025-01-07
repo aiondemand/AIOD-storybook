@@ -8,7 +8,10 @@ export const createCard = ({
   date,
   category,
   variant,
-  text
+  text,
+  link,
+  icon,
+  label
 }) => {
   const card = document.createElement('div');
   card.className = ['card-news'].join(' ');
@@ -41,7 +44,7 @@ export const createCard = ({
             ${title ? `<h3>${title}</h3>` : ""}
             ${text ? `<p>${text}</p>` : ""}
             ${date ?`<div class="date">${formattedDate}</div>` : ""}
-            <a href="#" title="" class="btn btn-default mt-3" target="_blank">Know more <i class="icon-arrow"></i></a>
+            ${link ? `<a href="${link}" class="btn btn-default mt-3">${label} <i class="icon-${icon}"></i></a>` : ""}
          </div>
       </div>`
 

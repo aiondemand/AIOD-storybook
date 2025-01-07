@@ -5,6 +5,9 @@ export const createCardDeveloper = ({
   title,
   imageAlt,
   list,
+  link,
+  icon,
+  label,
 }) => {
   const cardDeveloper = document.createElement('div');
   cardDeveloper.className = ['product-list-developer-card  has-unordered-list'].join(' ');
@@ -23,7 +26,7 @@ export const createCardDeveloper = ({
             ${listHTML}
             </ul>
          </div>
-         <a href="#" class="btn btn-default">Download <i class="icon-plus"></i></a>
+          ${link ? `<a href="${link}" class="btn btn-default">${label} <i class="icon-${icon}"></i></a>` : ""}
       </div>
    </div>`
 

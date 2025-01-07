@@ -7,7 +7,11 @@ export const createCardSimple = ({
   date,
   category,
   variant,
-  text
+  text,
+  link,
+  linkCircle,
+  icon,
+  label
 }) => {
   const cardSimple = document.createElement('div');
   
@@ -25,9 +29,7 @@ export const createCardSimple = ({
          <span class="category">${category}</span>
          <div class="numbers">
             <h2>${number}</h2>
-            <a href="#" class="btn btn-circle btn-circle--yellow">
-               <i class="icon-arrow"></i>
-            </a>
+            ${linkCircle ? `<a href="${linkCircle}" class="btn btn-circle btn-circle--yellow"><i class="icon-arrow"></i></a>` : ""}
          </div>
       </div>
      </div>`
@@ -51,14 +53,14 @@ export const createCardSimple = ({
                   ${date ? `${formattedDate}` : ""}
                </div>
                ${variant === 'positions' ? `
-                  <a href="#" class="btn btn-circle btn-circle--yellow">
+                  ${linkCircle ? `<a href="${linkCircle}" class="btn btn-circle btn-circle--yellow">
                      <i class="icon-arrow"></i>
-                  </a>`: ""
-               }
+                  </a>` : ""}
+               `: ""}
             </div>
             ${variant === 'services' ? `
-               <a href="" class="btn btn-default" target="_blank">Know more <i class="icon-arrow"></i></a>`: ""
-            }
+               ${link ? `<a href="${link}" class="btn btn-default">${label} <i class="icon-${icon}"></i></a>` : ""}
+            ` : ""}
          </div>
       </div>`
    }
@@ -68,14 +70,14 @@ export const createCardSimple = ({
       <div class="card-news-container">
          <div class="card-news-content">
             <span class="category mb-3">${category}</span>
-            <a href="" class="btn btn-default" target="_blank">Available for you <i class="icon-arrow"></i></a>
+            ${link ? `<a href="${link}" class="btn btn-default">${label} <i class="icon-${icon}"></i></a>` : ""}
          </div>
          <div class="card-news-content mt-5 pt-5">
             <div class="d-flex align-items-center justify-content-between">
                <h3>${title}</h3>
-               <a href="" class="btn btn-circle btn-circle--yellow">
+               ${linkCircle ? `<a href="${linkCircle}" class="btn btn-circle btn-circle--yellow">
                   <i class="icon-arrow"></i>
-               </a>
+               </a>` : ""}
             </div>
          </div>
       </div>`

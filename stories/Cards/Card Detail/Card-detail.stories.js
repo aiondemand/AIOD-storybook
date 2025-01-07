@@ -17,9 +17,15 @@ export default {
    title: { control: 'text' },
    text: { control: 'text' },
    number: { control: 'text' },
-   image: { control:  'text' } ,
+   image: { control: { type: 'file', accept: '.png, .jpeg' } } ,
    imageAlt: { control: 'text' },
    list: { control: 'object' },
+   link: { control: 'text' },
+   icon: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+   label: { control: 'text' },
 
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -29,7 +35,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const cardDetail = {
   args: {
-    image: 'https://aiod.dev.loba.com/wp-content/uploads/2023/06/developer-tools2-1.png',
+    image: ["../../../assets/img/developer-tools2.png"],
     imageAlt: 'Practitioners Portal',
     title: "Practitioners Portal 2",
     list:{
@@ -38,6 +44,9 @@ export const cardDetail = {
       "3": "Combine these to create and run experiments",
     },
     number: "01",
-    text: "Explore the research contents on the AI on Demand to customise your experiments"
+    text: "Explore the research contents on the AI on Demand to customise your experiments",
+    link: '#',
+    icon: 'plus',
+    label: 'Know more',
   },
 };

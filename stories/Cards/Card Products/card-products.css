@@ -4,3 +4,6 @@
 .card-news{
    font-family: "Montserrat", sans-serif;
 }
+#story--componentes-cards-card-products--card-products--primary{
+   max-width: 450px !important;
+ }

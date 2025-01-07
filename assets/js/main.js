@@ -6,7 +6,6 @@ import {
    listenerKeyUpForm,
    listenerRGPD,
    openRGPD,
-   validateForm,
    controlScrollMenu,
    openMenuMobile,
    openCloseSubmenuMobile,

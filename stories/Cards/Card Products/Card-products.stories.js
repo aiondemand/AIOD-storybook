@@ -21,6 +21,12 @@ export default {
       options: ['virtual-labs', 'communities', 'innovations', 'robospot','developer-tools'],
    },
    imageAlt: { control: 'text' },
+   link: { control: 'text' },
+   icon: {
+      control: { type: 'select' },
+      options: ['arrow', 'plus', 'send', 'arrow-back', 'resources-saved'],
+   },
+   label: { control: 'text' },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -30,7 +36,11 @@ export default {
 export const CardProducts = {
   args: {
    image: 'virtual-labs',
+   imageAlt: 'Virtual Labs',
    title: "Virtual Lab",
    content: "Tools for researchers. To experiment, to play, to explore datasets, ML, NLP.",
+   link: '#',
+   icon: 'arrow',
+   label: 'Know more',
   },
 };
