@@ -193,25 +193,25 @@
          <div class="col-12">
             <div class="product-list">
                <a class="product-list-link" href="">
-               <div class="row">
-                  <div class="col-12 col-lg-1 offset-lg-1">
-                     <span class="product-list-number">01</span>
+                  <div class="row">
+                     <div class="col-12 col-lg-1 offset-lg-1">
+                        <span class="product-list-number">01</span>
+                     </div>
+                     <div class="col-12 col-lg-6">
+                        <div class="product-list-title">Practitioners Portal</div>
+                        <img src="../assets/img/product-dummy.png" alt="" class="d-block d-lg-none w-100 mb-m-30">
+                        <p>Explore the research contents on the AI on Demand to customise your experiments</p>
+                        <ul class="unordered-list">
+                        <li>Explore datasets. papers, models</li>
+                        <li>Generate/export code</li>
+                        <li>Combine these to create and run experiments</li>
+                        </ul>
+                        <div class="btn btn-default btn-default--yellow">Know more <i class="icon-plus"></i></div>
+                     </div>
+                     <div class="col-12 col-lg-3 d-none d-lg-block">
+                        <img src="../assets/img/product-dummy.png" alt="">
+                     </div>
                   </div>
-                  <div class="col-12 col-lg-6">
-                     <div class="product-list-title">Practitioners Portal</div>
-                     <img src="../assets/img/product-dummy.png" alt="" class="d-block d-lg-none w-100 mb-m-30">
-                     <p>Explore the research contents on the AI on Demand to customise your experiments</p>
-                     <ul class="unordered-list">
-                     <li>Explore datasets. papers, models</li>
-                     <li>Generate/export code</li>
-                     <li>Combine these to create and run experiments</li>
-                     </ul>
-                     <div class="btn btn-default btn-default--yellow">Know more <i class="icon-plus"></i></div>
-                  </div>
-                  <div class="col-12 col-lg-3 d-none d-lg-block">
-                     <img src="../assets/img/product-dummy.png" alt="">
-                  </div>
-               </div>
                </a>
             </div>
          </div>
@@ -559,5 +559,5 @@
       </div>
       
    </div>
-</main>
+   </main>
 <?php include "html_final.php" ?>
