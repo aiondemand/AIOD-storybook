@@ -22,7 +22,7 @@ const preview = {
  decorators: [
     (Story, context) => {
       const htmlElement = document.documentElement;
-      const backgroundName = context.globals.backgrounds.value
+      const backgroundName = context?.globals?.backgrounds?.value
 
       // Alterar o data-theme
         if (backgroundName === '#ffffff') {
