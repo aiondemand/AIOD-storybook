@@ -8,7 +8,6 @@
             <a href="#">
                <i class="icon-users"></i>
                <span>COMMUNITY</span>
-               
             </a>
          </li>
          <li class="sidebar-link">
