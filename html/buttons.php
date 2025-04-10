@@ -108,6 +108,7 @@
             <p class="label">Scroll</p>
             <a href="#" aria-label="Scroll to Next Section" class="btn btn-primary hero-btn-scroll"><i class="icon-arrow"></i></a>
          </div>
+         
          <div class="col-12 col-md-4 mt-5">
             <p class="label">Detail</p>
             <a href="#" title="" class="btn btn-default" target="_blank">Know more <i class="icon-arrow"></i></a>
