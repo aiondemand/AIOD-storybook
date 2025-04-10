@@ -112,6 +112,8 @@
             <p class="label">Detail</p>
             <a href="#" title="" class="btn btn-default" target="_blank">Know more <i class="icon-arrow"></i></a>
          </div>
+
+         
          <div class="col-12 col-md-4 mt-5">
             <p class="label">Footer</p>
             <a class="mt-m-40 btn btn-secondary" href="https://www.ai4europe.eu/open-calls">Discover opportunities</a>
