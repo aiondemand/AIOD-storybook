@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #41b6e6;
+        fill: $color-primary3;
         fill-rule: evenodd;
       }
     </style>

@@ -84,7 +84,6 @@
 			display: inline;
 			vertical-align: unset;
 			width: auto;
-         color: $color-primary;
 		}
 	
 		p{
@@ -199,3 +198,98 @@
 }
 
 /* Barra cookies END */
+
+
+// Zoho Page Sense
+
+#zpcookie-banner{
+   min-height: calc(100% - 3.5rem);
+   display: flex;
+   align-items: center;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.4);
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+   &.zpcustom-layout-2 .zpcookie-action-buttons.zpbutton-type-primary, 
+   &.zpcustom-layout-2 .zpcookie-action-buttons.zpbutton-type-secondary {
+      background-color: #FFED00;
+      color: #0047BB;
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      width: fit-content;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 24px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      height: auto;
+      margin: 0;
+      width: 100%;
+      &:before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         border-radius: 100px;
+         padding: 2px;
+         background: linear-gradient(180deg, rgba(130, 120, 0, 0.25) 0%, rgba(130, 120, 0, 0.125) 53.65%, rgba(130, 120, 0, 0) 100%);
+         -webkit-mask: linear-gradient(#fff, #fff) content-box, linear-gradient(#fff, #fff);
+         -webkit-mask-composite: xor;
+         mask-composite: exclude;
+      }
+      &:hover{
+         background-color: #0047BB;
+         color: #FFED00;
+      }
+   }
+
+}
+
+#zpcookie-banner-msgbar{
+   max-width: 500px;
+   margin: 0 auto;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   pointer-events: auto;
+   background-color: #fff;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   border-radius: 20px;
+   outline: 0;
+
+   p{
+      flex-direction: column;
+      color: #212529;
+      padding: 2rem 1.5rem;
+      margin-bottom: 0;
+      font-family: "Jura", sans-serif;
+      a{
+         font-weight: 600;
+         color: #000613;
+         text-decoration: none !important;
+         margin: 0;
+         padding: 0;
+         &:hover{
+            color: #0047BB;
+         }
+      }
+      span{
+         &:nth-child(2){
+            flex-direction: row-reverse;
+            margin-left: 0;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 25px;
+
+            
+         }
+
+      }
+   }
+}

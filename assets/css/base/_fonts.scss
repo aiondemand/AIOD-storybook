@@ -8,3 +8,10 @@ h6, .h6 {
 	color: $font-heading-color;
 	font-family: $font-variant;
 }
+
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Regular.ttf");
+	font-weight: 400;
+ }

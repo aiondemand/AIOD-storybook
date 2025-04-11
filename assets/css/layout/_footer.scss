@@ -152,6 +152,13 @@
                color: #E3E5E8;
             }
          }
+         &-mail{
+            a{
+               color: $white;
+               text-decoration: underline;
+            }
+         }
+        
       }
 
       .integrate {
@@ -474,6 +481,9 @@
          &::placeholder{
             color: $black;
          }
+      }
+      .contact-us-mail a{
+         color: #00000085;
       }
    }
    .footer-bottom {

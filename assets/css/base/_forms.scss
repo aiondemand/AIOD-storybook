@@ -21,6 +21,17 @@ input[type="checkbox"]:disabled {
 		width: 100%;
 		clear: both;
 	}
+   &--search{
+      button{
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 0;
+         background: transparent;
+         border: none;
+         color: #FFED00;
+      }
+   }
 }
 
 label {
@@ -138,3 +149,5 @@ input[type="radio"] {
 	font-weight: 900;
 	line-height: 20px;
 }
+
+

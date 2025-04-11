@@ -1,6 +1,6 @@
 //Bootstrap Functions
 // ===== OVERIDE VARIABLES BOOTSTRAP ===== //
-@import "node_modules/bootstrap/scss/functions"; 
+@import "node_modules/bootstrap/scss/functions";
 
 @import "base/variables";
 @import "bootstrap/bootstrap-override";
@@ -10,6 +10,7 @@
 @import "base/stylesheet";
 @import "base/icons";
 @import "base/fonts";
+@import "base/cards";
 @import "base/base";
 @import "base/inputs";
 @import "base/select";
@@ -18,10 +19,10 @@
 @import "base/warnings";
 @import "base/buttons";
 @import "base/cookies";
-@import "base/cards";
-@import "base/slider";
+
 // ===== REUSABLE BLOCKS OF CODE ===== //
-// @import "modules/swiper";
+@import "modules/swiper";
+@import "modules/banner";
 
 // ===== SPECIFIC PAGE LAYOUT AND NON-REUSABLE STYLES ===== //
 
@@ -30,6 +31,12 @@
 @import "layout/loba";
 @import "layout/header";
 @import "layout/footer";
+@import "layout/homepage";
+@import "layout/about";
+@import "layout/product";
+@import "layout/privacy-policy";
+@import "layout/communication-requests";
+
 
 
 

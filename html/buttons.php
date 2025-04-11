@@ -1,98 +1,8 @@
 <?php include "html_inicial.php" ?>
 
 <main class="d-flex">
-   <div class="sidebar" id="sidebar">
-      <div class="menu">
-      <ul>
-         <li class="sidebar-link sidebar-link--active">
-            <a href="#">
-               <i class="icon-users"></i>
-               <span>COMMUNITY</span>
-            </a>
-         </li>
-         <li class="sidebar-link">
-            <a href="#">
-               <i class="icon-file-text"></i>
-               <span>Press Corner</span>
-            </a>
-         </li>
-         <li class="has-submenu open">
-            <span class="menu-item sidebar-link">
-            <div><i class="icon-map"></i> <span>AI NoE</span></div>
-            <span class="submenu-toggle">
-               <i class="icon-arrow-breadcrumb"></i>
-            </span>
-            </span>
-            <ul class="submenu open">
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>
-                     Map
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>Statistics
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>Topic & Applications
-                  </a>
-               </li>
-               <li>
-                  <a href=""><i class="icon-arrow-breadcrumb"></i>Information</a>
-               </li>
-            </ul>
-         </li>
-         <li class="sidebar-link">
-            <a href="#">
-               <i class="icon-star"></i>
-               <span>Sucess Stories</span>
-            </a>
-         </li>
-         <li class="has-submenu">
-            <span class="menu-item sidebar-link">
-               <div><i class="icon-forum"></i> <span>Forum</span></div>
-               <span class="submenu-toggle">
-                  <i class="icon-arrow-breadcrumb"></i>
-               </span>
-            </span>
-            <ul class="submenu">
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>
-                     Map
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>Statistics
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                     <i class="icon-arrow-breadcrumb"></i>Topic & Applications
-                  </a>
-               </li>
-               <li>
-                  <a href=""><i class="icon-arrow-breadcrumb"></i>Information</a>
-               </li>
-            </ul>
-         </li>
-      </ul>
-      </div>
-      <div class="sidebar-footer">
-         <div class="border-top border-bottom">
-            <p>Want to see your profile?</p>
-            <a href="" class="btn btn-default">Go to dashboard</a>
-         </div>
-         <div id="collapseButton">
-            <i class="icon-colapse"></i>
-            <span>collapse</span>
-         </div>
-      </div>
-   </div>
+   <?php include "sidebar.php"; ?>
+   <?php include "sidebar-user.php"; ?>
    <div class="container main-offset">
       <div class="row">
          <div class="col-12 col-md-4 mt-5">
@@ -155,6 +65,51 @@
          </div>
 
          
+      </div>
+      <div class="row homepage">
+         <div class="offset-lg-1 col-lg-11 section-faqs">
+            <div class="accordion" id="accordionFaqs">
+               <div class="accordion-item mb-3">
+               <h3 class="accordion-header d-flex justify-content-between align-items-center">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                     Click here to View all latest Workshops, Trainings
+                     <span class="icon-container"><i class="icon-arrow-down"></i></span>
+                  </button>
+
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFaqs">
+                     <div class="accordion-body pt-3">
+                     <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item mb-3">
+               <h3 class="accordion-header d-flex justify-content-between align-items-center">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Click here to View popular Datasets, models
+                     <span class="icon-container"><i class="icon-arrow-down"></i></span>
+                  </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFaqs">
+                     <div class="accordion-body pt-3">
+                     <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item mb-3">
+               <h3 class="accordion-header d-flex justify-content-between align-items-center">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                     Click here to View all latest AI popular services
+                     <span class="icon-container"><i class="icon-arrow-down"></i></span>
+                  </button> </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFaqs">
+                     <div class="accordion-body pt-3">
+                     <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 </main>

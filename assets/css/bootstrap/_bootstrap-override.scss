@@ -1083,3 +1083,5 @@ none !default;
 // Printing
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+$transition-collapse-width:   width .35s ease !default;

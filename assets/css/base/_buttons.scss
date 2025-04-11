@@ -59,10 +59,15 @@
       border: $buttonDefaultBorder;
    }
 
-   background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #41B6E6 0%, #0047BB 55%, #003399 100%);
+   // background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, $color-primary3 0%, #0047BB 55%, #003399 100%);
+   background: #0047BB;
    padding: 15px 30px;
    color: $buttonDefaultColor;
    position: relative;
+
+   @media screen and (max-width: 320px) {
+      padding: 10px 26px;      
+   }
 
    i {
       font-size: 10px;
@@ -94,7 +99,8 @@
             border: $buttonDefaultBorderHover;
          }
 
-         background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #FFFAB8 0%, #FFED00 55%, #E6D502 100%);
+         // background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #FFFAB8 0%, #FFED00 55%, #E6D502 100%);
+         background: #FFED00;
          color: $color-primary2;
 
          i {
@@ -110,7 +116,7 @@
          color: $color-primary2;
       }
       &:hover{
-         background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #41B6E6 0%, #0047BB 55%, #003399 100%);
+         background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, $color-primary3 0%, #0047BB 55%, #003399 100%);
          color: $buttonDefaultColor;
          i {
             color: $color-primary4;
@@ -310,8 +316,12 @@
       }
    }
    &--blue{
-      color: #41B6E6;
-      border-color: #41B6E6;
+      color: $color-primary3 !important;
+      border-color: $color-primary3;
+   }
+   &--white{
+      color: #FFFFFF;
+      border-color: #FFFFFF;
    }
 }
 
@@ -361,7 +371,7 @@
    }
 
    &::before {
-      background: linear-gradient(180deg, #0047BB 0%, #41B6E6 42.75%, #FFED00 83.75%);
+      background: linear-gradient(180deg, #0047BB 0%, $color-primary3 42.75%, #FFED00 83.75%);
       -webkit-mask: unset;
       padding: 0;
       transform: translateY(calc(30px - 100%));
@@ -384,7 +394,7 @@
 
 .btn-with-text{
    &.btn.btn-default {
-      background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #41B6E6 0%, #0047BB 55%, #003399 100%);
+      background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, $color-primary3 0%, #0047BB 55%, #003399 100%);
       width: 70px;
       height: 70px;
       max-width: 70px;
@@ -396,6 +406,7 @@
       margin-left: 30px;
       transform: translateX(-50%);
       transition: max-width 1000ms ease;
+      
 
       &:hover,
       &:focus,
@@ -496,3 +507,42 @@
       display: inline-block;
    }
 }
+
+.btn-light-gray {
+   color: #929292;
+   background-color: transparent;
+   border: 1px solid #929292;
+   
+   font-weight: $font-weight-medium;
+   transition: all 300ms ease;
+
+
+
+
+   &:hover,
+   &:focus,
+   &:active {
+      @include min-lg {
+         border-color: #929292;
+         background-color: #929292;
+         color: $color-primary;
+      }
+   }
+
+}
+
+[data-theme="light"] {
+   .btn-light-gray {
+      border: 1px solid transparent;
+      color:#000000B2;
+
+      &:hover, &.active {
+         background-color: #0047BB;
+         color: white;
+      }
+      &:focus {
+         box-shadow: none;
+      }
+   }
+}
+

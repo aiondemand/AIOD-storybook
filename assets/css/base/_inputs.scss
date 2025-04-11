@@ -1,6 +1,8 @@
 // === Input Texts === //
 
 input[type="text"].form-control,
+input[type="url"].form-control,
+input[type="date"].form-control,
 input[type="email"].form-control,
 input[type="password"].form-control,
 input[type="number"].form-control,
@@ -29,12 +31,12 @@ textarea {
 	
 	@if $inputTextFocus != 0 {
 		&:focus {
-         color:#41B6E6;
-         border-color:#41B6E6;
+         color:$color-primary3;
+         border-color:$color-primary3;
 			outline: none;
          &:hover{
-            color:#41B6E6;
-            border-color:#41B6E6;
+            color:$color-primary3;
+            border-color:$color-primary3;
          }
 		}
 	}
@@ -134,8 +136,8 @@ input[type="checkbox"] {
 			border-color: $inputCheckboxCheckedColor;
 		}
       &:before{
-         background-color: #41B6E6;
-         border-color: #41B6E6;
+         background-color: $color-primary3;
+         border-color: $color-primary3;
       }
 	}
 
@@ -201,8 +203,8 @@ input[type="radio"] {
 			background-color: $inputRadioCheckedColor;
 		}
       &:before{
-         background-color: #41B6E6;
-         border-color: #41B6E6 ;
+         background-color: $color-primary3;
+         border-color: $color-primary3 ;
       }
 	}
 
@@ -240,7 +242,7 @@ input[type="radio"] + label + label.form-check-label {
       }
 
       &:hover{
-         border-color: #41B6E6;
+         border-color: $color-primary3;
          
       }
       @if $inputTextFocus != 0 {

@@ -73,7 +73,7 @@
             }
 
             .btn {
-               background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, #41B6E6 0%, #0047BB 55%, #003399 100%);
+               background: radial-gradient(43.6% 43.6% at 49.98% 100.45%, $color-primary3 0%, #0047BB 55%, #003399 100%);
                color: $buttonDefaultColor;
    
                i {
@@ -81,12 +81,12 @@
                }
             }
             .product-list-title{
-               color: #41B6E6;
+               color: $color-primary3;
             }
             ul{
                li{
                   &::marker{
-                     color: #41B6E6;
+                     color: $color-primary3;
                   }
                }
             }
@@ -146,7 +146,7 @@
    &-text {
       font-size: 18px;
       line-height: 1.4;
-      background: linear-gradient(90deg, #1B72FF 0%, #41B6E6 51.04%, #FFED00 100%);
+      background: linear-gradient(90deg, #1B72FF 0%, $color-primary3 51.04%, #FFED00 100%);
       -webkit-text-fill-color: transparent;
       background-clip: text;
    }
@@ -233,7 +233,7 @@
 
 
             &:before {
-               background: linear-gradient(90deg, #0047BB 0%, #41B6E6 49.48%, #FFED00 100%);
+               background: linear-gradient(90deg, #0047BB 0%, $color-primary3 49.48%, #FFED00 100%);
                opacity: 1;
             }
 
@@ -423,6 +423,8 @@
 
       img{
          width: 100%;
+         height: 100%;
+         object-fit: cover;
       }
    }
    &-content{
@@ -434,6 +436,7 @@
          margin-bottom: 8px;
          display: block;
          color: #FFFFFFB2;
+         font-family: "Montserrat", sans-serif;
 
       }
       h3{
@@ -442,11 +445,12 @@
          font-weight: 300;
          transition: color 300ms ease;
          margin-bottom: 15px;
+         font-family: "Jura", sans-serif;
       }
       p{
          color: rgba(255, 255, 255, 0.7);
          font-size: 16px;
-         margin-bottom: 10px;
+         margin-bottom: 20px;
 
       }
       .date{
@@ -460,7 +464,7 @@
 
    }
    .tag-container{
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      // background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
       position: absolute;
       top: 0;
       left: 0;
@@ -473,7 +477,8 @@
       }
       .tag{
          font-size: 14px;
-         font-weight: 500;
+         font-weight: 600;
+         font-family: "Montserrat", sans-serif;
          padding: 6px 12px;
          color: $white;
          border: 1px solid $white;
@@ -481,15 +486,16 @@
          margin-top: 16px;
          margin-left: 16px;
          display: inline-block;
+         background: transparent;
          &--blue{
-            border-color: #41B6E6;
-            color: #41B6E6;
+            border-color: $color-primary3;
+            color: $color-primary3;
 
          }
+         &::before{
+            background: transparent;
+         }
       }
-     
-     
-
    }
    &:hover{
       text-decoration: none;
@@ -522,6 +528,8 @@
    .category{
       color: #FFFFFFB2;
       font-weight: 600;
+      text-transform: capitalize;
+      white-space: nowrap;
    }
    .numbers{
       display: flex;
@@ -535,6 +543,13 @@
          color: $white;
       }
    }
+   &:not(.card-position){
+      .card-news-content {
+         background-color: #020C20;
+         border-radius: 20px;
+      }
+   }
+  
 }
 
 .card-position{
@@ -574,8 +589,136 @@
       }
    }
 }
+.card-experts {
+   &-container {
+      margin-bottom: 25px;
+      border: 2px solid #FFFFFF26;
+      border-radius: 20px;
+      padding: 24px;
+
+      @include max-lg {
+         padding: 10px;
+      }
+      @include max-sm {
+         flex-wrap: wrap;
+         padding: 24px;
+      }
+      .card-experts-image {
+         width: 88px;
+         min-width: 88px;
+         height: 88px;
+
+         @include max-lg {
+            width: 60px;
+            min-width: 60px;
+            height: 60px;
+         }
+
+         @include max-md {
+            width: 88px;
+            min-width: 88px;
+            height: 88px;
+         }
+
+         img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+         }
+      }
+      .card-experts-content {
+         padding-left: 15px;
+         @include max-sm {
+            padding-left: 0;
+            padding-top: 20px;
+         }
+         .card-experts-name {
+            font-weight: 400;
+            font-size: 20px;
+            color: #FFFFFFB2;
+            font-family: "Jura", sans-serif;
+         }
+         .card-experts-category {
+            font-size: 14px;
+            font-weight: 600;
+         }
+         .card-experts-description {
+            font-size: 14px;
+            font-weight: 400;
+
+         }
+      }
+   }
+} 
+
+.card-video{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 16px 24px;
+   border: 1px solid #FFFFFF1A;
+   border-radius: 10px;
+   margin-bottom: 8px;
+   transition: all 300ms ease;
+   &.completed{
+      background: linear-gradient(91.53deg, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0.02) 100%);
+
+      svg{
+         display: block;
+      }
+   }
+   &:hover{
+      text-decoration: none;
+      background-color: $color-primary2;
+      span{
+         color: $color-primary4;
+      }
+      svg path{
+         stroke: $color-primary4;
+      }
+   }
+   span{
+      font-family: $font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: $color-primary3;
+      display: inline-block;
+   }
+
+   svg{
+      display: none;
+   }
+}
 
 [data-theme="light"] {
+   .card-video{
+      border: 1px solid #EEEEEE99;
+      &.completed{
+         background: #EEEEEE99;
+      }
+      span{
+         color: $color-primary2;
+      }
+      svg path{
+         stroke: $color-primary2;
+      }
+      &:hover{
+         text-decoration: none;
+         background-color: $color-primary2;
+         p{
+            color: $white;
+         }
+         span{
+            color: $color-primary4;
+         }
+         svg path{
+            stroke: $color-primary4;
+         }
+      }
+   }
    .product {
       .banner {
          h1 {
@@ -641,7 +784,7 @@
 
                &:before,
                &:focus:before {
-                  background: linear-gradient(90deg, #0047BB 0%, #41B6E6 100%);
+                  background: linear-gradient(90deg, #0047BB 0%, $color-primary3 100%);
                }
             }
 
@@ -693,15 +836,16 @@
                }
             }
          }
-         .tag-container{
-            &--blue{
-               background: transparent;
-               .tag--blue{
-                  border-color: $color-primary2;
-                  color: $color-primary2;
-               }
-            }
-         }
+         
+         //  .tag-container{
+            // &--blue{
+            //    background: transparent;
+            //    .tag--blue{
+            //       border-color: $color-primary2;
+            //       color: $color-primary2;
+            //    }
+            // }
+         // }
       }
       &-content{
          h3,
@@ -726,6 +870,12 @@
             color: $color-primary2;
          }
       }
+      &:not(.card-position){
+         .card-news-content {
+            background-color: #F7F7F7;
+            border-radius: 20px;
+         }
+      }
 
    }
 
@@ -738,7 +888,7 @@
       }
    }
    .card-horizontal{
-      .card-news-container{
+      .card-news-container{         
          &:hover{
             p{
                color: $color-primary2;
@@ -752,7 +902,38 @@
 
             }
          }
+         
       }
    }
+
+   .card-experts {
+      &-container {
+         border: 2px solid #00000029;  
+         
+         .card-experts-content {
+            padding-left: 15px;
+            @include max-sm {
+               padding-left: 0;
+               padding-top: 20px;
+            }
+            .card-experts-name {
+               font-weight: 400;
+               font-size: 20px;
+               color: #000000B2;
+               font-family: "Jura", sans-serif;
+            }
+            .card-experts-category {
+               font-size: 14px;
+               font-weight: 600;
+               color: #000000B2;
+            }
+            .card-experts-description {
+               font-size: 14px;
+               font-weight: 400;
+               color: #000000B2;
+            }
+         }
+      }
+   } 
 
 }

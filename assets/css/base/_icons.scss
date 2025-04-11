@@ -2,11 +2,11 @@
 
 @font-face {
    font-family: 'icomoon';
-   src:  url('#{$font-path}/icomoon.eot?w15l5');
-   src:  url('#{$font-path}/icomoon.eot?w15l5#iefix') format('embedded-opentype'),
-     url('#{$font-path}/icomoon.ttf?w15l5') format('truetype'),
-     url('#{$font-path}/icomoon.woff?w15l5') format('woff'),
-     url('#{$font-path}/icomoon.svg?w15l5#icomoon') format('svg');
+   src:  url('#{$font-path}/icomoon.eot?vhwtyz');
+   src:  url('#{$font-path}/icomoon.eot?vhwtyz#iefix') format('embedded-opentype'),
+     url('#{$font-path}/icomoon.ttf?vhwtyz') format('truetype'),
+     url('#{$font-path}/icomoon.woff?vhwtyz') format('woff'),
+     url('#{$font-path}/icomoon.svg?vhwtyz#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
  }
@@ -34,45 +34,59 @@
  
  //** File name for all font files.
  $icon-send: unquote('"\\e903"');
- $icon-plus: unquote('"\\e902"');
- $icon-arrow: unquote('"\\e900"');
- $icon-linkedin: unquote('"\\e901"');
- $icon-twitter: unquote('"\\e904"');
- $icon-youtube: unquote('"\\e905"');
- $icon-about: unquote('"\\e906"');
- $icon-ai: unquote('"\\e907"');
- $icon-api: unquote('"\\e908"');
- $icon-arrow-breadcrumb: unquote('"\\e909"');
- $icon-arrow-back: unquote('"\\e90a"');
- $icon-award: unquote('"\\e90b"');
- $icon-catalogue: unquote('"\\e90c"');
- $icon-clock: unquote('"\\e90d"');
- $icon-colapse: unquote('"\\e90e"');
- $icon-contribute: unquote('"\\e90f"');
- $icon-dashboard: unquote('"\\e910"');
- $icon-datasets: unquote('"\\e911"');
- $icon-dissemination: unquote('"\\e912"');
- $icon-dollar: unquote('"\\e913"');
- $icon-download: unquote('"\\e914"');
- $icon-feedback: unquote('"\\e915"');
- $icon-file-text: unquote('"\\e916"');
- $icon-filters: unquote('"\\e917"');
- $icon-folder: unquote('"\\e918"');
- $icon-forum: unquote('"\\e919"');
- $icon-getting-started: unquote('"\\e91a"');
- $icon-lupa: unquote('"\\e91b"');
- $icon-map: unquote('"\\e91c"');
- $icon-moon: unquote('"\\e91d"');
- $icon-notifications: unquote('"\\e91e"');
- $icon-resources-saved: unquote('"\\e91f"');
- $icon-settings: unquote('"\\e920"');
- $icon-star: unquote('"\\e921"');
- $icon-sun: unquote('"\\e922"');
- $icon-users: unquote('"\\e923"');
- $icon-refresh: unquote('"\\e924"');
+$icon-plus: unquote('"\\e902"');
+$icon-arrow: unquote('"\\e900"');
+$icon-linkedin: unquote('"\\e901"');
+$icon-twitter: unquote('"\\e904"');
+$icon-youtube: unquote('"\\e905"');
+$icon-about: unquote('"\\e906"');
+$icon-ai: unquote('"\\e907"');
+$icon-api: unquote('"\\e908"');
+$icon-arrow-breadcrumb: unquote('"\\e909"');
+$icon-arrow-back: unquote('"\\e90a"');
+$icon-award: unquote('"\\e90b"');
+$icon-catalogue: unquote('"\\e90c"');
+$icon-clock: unquote('"\\e90d"');
+$icon-colapse: unquote('"\\e90e"');
+$icon-contribute: unquote('"\\e90f"');
+$icon-dashboard: unquote('"\\e910"');
+$icon-datasets: unquote('"\\e911"');
+$icon-dissemination: unquote('"\\e912"');
+$icon-dollar: unquote('"\\e913"');
+$icon-download: unquote('"\\e914"');
+$icon-feedback: unquote('"\\e915"');
+$icon-file-text: unquote('"\\e916"');
+$icon-filters: unquote('"\\e917"');
+$icon-folder: unquote('"\\e918"');
+$icon-forum: unquote('"\\e919"');
+$icon-getting-started: unquote('"\\e91a"');
+$icon-lupa: unquote('"\\e91b"');
+$icon-map: unquote('"\\e91c"');
+$icon-moon: unquote('"\\e91d"');
+$icon-notifications: unquote('"\\e91e"');
+$icon-resources-saved: unquote('"\\e91f"');
+$icon-settings: unquote('"\\e920"');
+$icon-star: unquote('"\\e921"');
+$icon-sun: unquote('"\\e922"');
+$icon-users: unquote('"\\e923"');
+$icon-refresh: unquote('"\\e924"');
+$icon-arrow-left: unquote('"\\e925"');
+$icon-arrow-down: unquote('"\\e926"');
+$icon-experts: unquote('"\\e927"');
+$icon-education: unquote('"\\e928"');
+$icon-flag: unquote('"\\e929"');
+$icon-like: unquote('"\\e92a"');
+$icon-grid: unquote('"\\e92b"');
+$icon-mail: unquote('"\\e92c"');
+$icon-sdk: unquote('"\\e92d"');
+$icon-tools: unquote('"\\e92e"');
+$icon-website: unquote('"\\e92f"');
+$icon-upload: unquote('"\\e930"');
+
+
   
  
- .icon-send {
+.icon-send {
    &:before {
      content: $icon-send; 
    }
@@ -257,3 +271,65 @@
      content: $icon-refresh; 
    }
  }
+ .icon-arrow-left {
+   &:before {
+     content: $icon-arrow-left; 
+   }
+ }
+ .icon-arrow-down {
+   &:before {
+     content: $icon-arrow-down; 
+   }
+ }
+ .icon-experts {
+   &:before {
+     content: $icon-experts; 
+   }
+ }
+ .icon-education {
+   &:before {
+     content: $icon-education; 
+   }
+ }
+ .icon-flag {
+   &:before {
+     content: $icon-flag; 
+   }
+ }
+ .icon-like {
+   &:before {
+     content: $icon-like; 
+   }
+ }
+ .icon-grid {
+   &:before {
+     content: $icon-grid; 
+   }
+ }
+ .icon-mail {
+   &:before {
+     content: $icon-mail; 
+   }
+ }
+ .icon-sdk {
+   &:before {
+     content: $icon-sdk; 
+   }
+ }
+ .icon-tools {
+   &:before {
+     content: $icon-tools; 
+   }
+ }
+ .icon-website {
+   &:before {
+     content: $icon-website; 
+   }
+ }
+ .icon-upload {
+   &:before {
+     content: $icon-upload; 
+   }
+ }
+ 
+ 

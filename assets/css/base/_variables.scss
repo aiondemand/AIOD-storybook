@@ -40,7 +40,7 @@ $screen-xl-max: (
 
 $color-primary: #000613;
 $color-primary2: #0047BB;
-$color-primary3: #6DD5FF;
+$color-primary3: #41B6E6;
 $color-primary4: #FFED00;
 $color-primary5: #FFFFFF;
 $color-primary6: #D9D9D9;
@@ -50,6 +50,7 @@ $color-primary-darker: $color-primary6;
 // Prefix for :root CSS variables
 
 $prefix:                      loba- !default;
+
 
 $color-light-primary: #515151;
 $color-light-primary2: #ECECEC;
@@ -201,7 +202,7 @@ $buttonXLFontSize: 24px;
 $formGroupMarginBottom: 15px;
 $formGroupLabelMarginBottom: 5px;
 $formGroupLabelWeight: bold; // 0 - to disable it
-$formErrorMarginTop: 5px;
+$formErrorMarginTop: 10px;
 $formErrorMarginBottom: 25px;
 $formErrorColor: $color-danger;
 $formErrorFontSize: 12px;
@@ -232,9 +233,9 @@ $inputMarginRight: 10px;
 $inputMarginBottom: 20px;
 $inputDisabledOpacity: 0.5;
 $inputBoxShadow: 0; // 0 - to disable box-shadow
-$inputFocusBoxShadow: 0;
+$inputFocusBoxShadow: 0 ;
 $inputBorderRadius: 2px; // 0 - to disable border radius
-$inputBorder: 1px solid #ABB5BE; // 0 - to disable border
+$inputBorder:0; // 0 - to disable border
 $inputBackground: #fff;
 $inputFontSize: 16px;
 $inputFontWeight: normal;
@@ -242,10 +243,10 @@ $inputFontWeight: normal;
 $inputCheckboxThickness: 3px;
 $inputCheckboxWidth: 10px;
 $inputCheckboxHeight: 6px;
-$inputCheckboxTop: 5px; // Check Position
+$inputCheckboxTop: 4px; // Check Position
 $inputCheckboxLeft: 4px; // Check Position
 $inputCheckboxUncheckedColor: transparent;
-$inputCheckboxCheckedColor: $white;
+$inputCheckboxCheckedColor: $color-primary;
 // Radios
 $inputRadioBorderRadius: 50%;
 $inputRadioBallWidth: 6px;
@@ -253,19 +254,19 @@ $inputRadioBallHeight: 6px;
 $inputRadioBallTop: 5px;
 $inputRadioBallLeft: 5px;
 $inputRadioBallBorderRadius: 50%;
-$inputRadioUncheckedColor: transparent;
+$inputRadioUncheckedColor: #f3f3f3;
 $inputRadioCheckedColor: $white;
 
 // ===== CUSTOM SELECT BOXES ===== //
-$selectHeight: 44px;
-$selectBorderRadius: 20px;
-$selectBorder: 1px solid #FFFFFF4D;
-$selectBackground: transparent;
+$selectHeight: 34px;
+$selectBorderRadius: 3px;
+$selectBorder: 1px solid #ddd;
+$selectBackground: white;
 $selectBackgroundOpen: $color-primary;
 $selectColor: $color-default;
 $selectFontSize: 14px;
-$selectItemsBackground: $black;
-$selectItemsBackgroundHover: $black;
+$selectItemsBackground: white;
+$selectItemsBackgroundHover: $color-primary;
 $selectItemsColorHover: white;
 
 // ===== CUSTOM INPUT FILE ===== //

@@ -90,19 +90,15 @@
   <!-- End Google Tag Manager (noscript) -->
   <?php } ?>
 
-  	<!-- Header -->
-	<header class="<?php if (isset($hideMenu)) {?>hide-header<?php } ?>" id="header">
+    	<!-- Header -->
+       <header class="<?php if (isset($headerDashboard)) {?>header-dashboard<?php } ?>" id="header">
 		<div class="container-fluid">
         	<div class="row">
             <div class="col-12">
                <div class="header-nav">
                   <div class="header-nav-logo">
-                     <a href="index.php"><img src="../assets/img/logo.svg" alt="" class="logotipo"><img src="../assets/img/logo-cinza.svg" alt="" class="logotipo-grey d-none"></a>
-                     <div class="icon-header">
-                        <a href="#" class="header-items-icon search-mobile toggle-modal" data-modalContainer="search-popup">
-                           <i class="icon-search"></i>
-                        </a>
-                        <div id="open-mobile-menu">
+                     <?php if (!isset($headerDashboard)): ?>
+                        <div class="open-mobile-menu">
                            <div class="hamburguer d-lg-none d-xl-none">
                               <span></span>
                            </div>
@@ -110,68 +106,125 @@
                               <span></span>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div id="header-items">
-                     <ul class="main-menu">   
-                        <li class="menu">
-                           <div class="menu-link-mobile">
-                              <a class="menu-link" href="#">About <i class="icon-arrow d-block d-lg-none"></i></a>
-                              
+                     <?php endif; ?>
+
+                     <?php if (isset($headerDashboard)): ?>
+                        <div id="collapseButton" class="d-flex d-lg-none">
+                           <div class="hamburguer">
+                              <span></span>
                            </div>
-                        </li>
-                        <li class="menu">
-                           <div class="menu-link-mobile has-submenu">
-                              <a class="menu-link">Services <i class="icon-arrow d-block d-lg-none"></i></a>
-                           </div>
-                           <div class="sub-menu d-flex flex-column">
-                              <ul>
-                                 <li>
-                                    <a href="#">
-                                       <span>AI Builder</span>
-                                       <p>Tools for researchers. To experiment, to play, to explore datasets, ML, NLP.</p>
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#">
-                                       <span>RAIL</span>
-                                       <p>More than 100 companies showcasing how AI helped them to bootstrap their busines</p>
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#">
-                                       <span>RoboCompass</span>
-                                       <p>Are you informed about the latest projects from the EC on AI and Robotics?</p>
-                                    </a>
-                                 </li>
-                                 <li class="highlight">
-                                    <a href="#">
-                                       <span>Integrate <br>Your Service</span>
-                                       <p>Tools for robotics people. <br>
-                                       Eurocore, OpenEase</p>
-                                    </a>
-                                 </li>
-                              </ul>
-                              <a class="mt-4 btn btn-secondary" href="">See all services</a>
-                           </div>
-                        </li>
-                        <li class="menu">
-                           <div class="menu-link-mobile">
-                              <a class="menu-link" href="#">Develop <i class="icon-arrow d-block d-lg-none"></i></a>
-                           </div>
-                        </li>
-                     </ul>
-                    
-                  </div>
-                  <div class="d-flex flex-lg-row menu-right">
-                        <a href="" class="btn btn btn-circle btn-circle--blue btn-search ml-2"><i class="icon-lupa"></i></a>
-                        <div class="user-avatar">
-                           <a href="" class="btn btn btn-circle btn-user ml-2">
-                              <img src="../assets/img/user-image.jpeg" alt="">
-                              <span class="notifications">1</span>
-                           </a>
-                           <span>Nuno <br> Alves</span>
                         </div>
+                     <?php endif; ?>
+                     <a href="index.php"><img src="../assets/img/logo-white.svg" alt="" class="logotipo"><img src="../assets/img/logo-cinza.svg" alt="" class="logotipo-grey d-none"></a>
+
+                     <?php if (isset($headerDashboard)): ?>
+                        <div id="collapseButton" class="d-none d-lg-flex">
+                           <i class="icon-colapse"></i>
+                        </div>
+                        
+                     <?php endif; ?>
+
+                     <a href="" class="btn btn btn-circle btn-circle--blue btn-search ml-5 mr-0 d-flex d-lg-none"><i class="icon-lupa"></i></a>
+
+                     <!-- Show quando logado -->
+                     <?php if (isset($headerDashboard)): ?>
+                           <div class="user-avatar-button user-avatar d-flex d-lg-none mr-0">
+                              <div class="btn btn btn-circle btn-user ml-0 mr-0">
+                                 <img src="../assets/img/user-image.jpeg" alt="">
+                                 <span class="notifications">1</span>
+                              </div>
+                           </div>
+                        <?php else: ?>
+                           <!-- hide quando não logado -->
+                           <a class="btn btn-success btn-success--white mr-0 d-flex d-lg-none" href="">Log In</a>
+                        <?php endif; ?>
+
+                     <!-- <div class="icon-header d-block d-lg-none"> -->
+                    
+                        <!-- <a href="#" class="header-items-icon search-mobile toggle-modal" data-modalContainer="search-popup">
+                           <i class="icon-search"></i>
+                        </a> -->
+                      
+                     <!-- </div> -->
+                  </div>
+                  <?php if (!isset($headerDashboard)): ?>
+                     <div id="header-items">
+                        <ul class="main-menu">   
+                           <li class="menu">
+                              <div class="menu-link-mobile">
+                                 <a class="menu-link" href="#">Resources <i class="icon-arrow d-block d-lg-none"></i></a>
+                                 
+                              </div>
+                           </li>
+                           <li class="menu">
+                              <div class="menu-link-mobile has-submenu">
+                                 <a class="menu-link">Tools <i class="icon-arrow d-block d-lg-none"></i></a>
+                              </div>
+                              <div class="sub-menu d-flex flex-column">
+                                 <ul>
+                                    <li>
+                                       <a href="#">
+                                          <span>Most Popular Tools</span>
+                                          <p>Explore the research contents on the AI on Demand to customise your experiments!</p>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="#">
+                                          <span>RAIL</span>
+                                          <p>Explore the research contents on the AI on Demand to customise your experiments!</p>
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a href="#">
+                                          <span>AI Builder</span>
+                                          <p>AI4EU Experiments is an open source platform for the development, training, sharing and deployment of AI models.</p>
+                                       </a>
+                                    </li>
+                                    <li class="highlight">
+                                       <a href="#">
+                                          <span>RoboCompass</span>
+                                          <p>Evaluate non-technological aspects of responsible robotics.</p>
+                                       </a>
+                                    </li>
+                                 </ul>
+                                 <a class="mt-4 btn btn-secondary" href="">See all tools</a>
+                              </div>
+                           </li>
+                           <li class="menu">
+                              <div class="menu-link-mobile">
+                                 <a class="menu-link" href="#">Community <i class="icon-arrow d-block d-lg-none"></i></a>
+                              </div>
+                           </li>
+                        </ul>
+                     
+                     </div>
+                  <?php endif; ?>
+                  <div class="d-flex flex-lg-row menu-right">
+                        <?php if (isset($headerDashboard)): ?>
+                           <form id="customForm" class="search-input">
+                              <input type="hidden" name="action" value="">
+                              <div class="form-group">
+                                 <input type="text" name="name" placeholder="Search..." id="name" class="form-control" required="">
+                              </div>
+                           </form>
+                        <?php endif; ?>
+                        <a href="" class="btn btn btn-circle btn-circle--blue btn-search ml-2 d-none d-lg-flex"><i class="icon-lupa"></i></a>
+                        <a href="undefined" class="btn btn-default btn-user d-none d-lg-flex">Get Started</a>
+
+
+                        <!-- Show quando logado -->
+                        <?php if (isset($headerDashboard)): ?>
+                           <div class="user-avatar-button user-avatar d-none d-lg-flex">
+                              <div class="btn btn btn-circle btn-user ml-2">
+                                 <img src="../assets/img/user-image.jpeg" alt="">
+                                 <span class="notifications">1</span>
+                              </div>
+                              <span>Nuno <br> Alves</span>
+                           </div>
+                        <?php else: ?>
+                           <!-- hide quando não logado -->
+                           <a class="btn btn-success btn-success--white mr-5 d-none d-lg-flex" href="">Log In</a>
+                        <?php endif; ?>
                         <div class="theme-switch-wrapper">
                            <label class="theme-switch" for="checkbox">
                               <input type="checkbox" id="checkbox" />
@@ -199,7 +252,6 @@
                            </label>
                         </div>
                      </div>
-                    
                </div>
 				</div>
 			</div>
