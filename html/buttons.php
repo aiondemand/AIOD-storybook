@@ -41,6 +41,10 @@
             <a class="btn btn-success mb-m-50" href="">About the project</a>
          </div>
          <div class="col-12 col-md-4 mt-5">
+            <p class="label">Footer underline blue</p>
+            <a class="btn btn-success btn-success--blue" href="">About the project</a>
+         </div>
+         <div class="col-12 col-md-4 mt-5">
             <p class="label">Arrow</p>
             <a href="" aria-label="Let´s develop together" class="btn-with-text btn btn-default">
                <div class="btn-circle-title">Let´s develop together</div> <i class="icon-arrow"></i>

@@ -4,127 +4,82 @@
    <?php include "sidebar.php"; ?>
    <?php include "sidebar-user.php"; ?>
    <div class="container main-offset">
-      <div class="row">
+      <div class="row section-experts-detail">
          <div class="col-12">
             <p class="label mt-5 pt-5">Form</p>
-            <form id="customForm">
-               <input type="hidden" name="action" value="">
+            <form action="" method="post" id="form-expert" class="form-expert validate-form">
                <div class="warnings">
-               <p class="warnings__success">Mensagem enviada com sucesso. Obrigado.</p>
-               <p class="warnings__error">Preencha o formulário corretamente.</p>
+                  <p class="warnings__success">Mensagem enviada com sucesso. Obrigado.</p>
+                  <p class="warnings__error">Preencha o formulário corretamente.</p>
                </div>
-
                <div class="row">
                   <div class="col-md-6">
-                     <!-- Input Text Styles -->
                      <div class="form-group">
-                        <label for="">Name:</label>
-                        <input type="text" name="name" placeholder="Input text..." id="name" class="form-control" required
-                        data-msg="O campo é obrigatório">
+                        <input type="text" name="name" placeholder="Name*" id="name" class="form-control" required data-msg="Required field">
                      </div>
-                     <div class="form-group">
-                        <label for="">Email:</label>
-                        <input type="email" name="email" placeholder="Input text..." id="email" class="form-control" required
-                        data-msg="Por favor, insira um campo de email válido" data-msg-required="Campo obrigatório">
-                     </div>
-                     <div class="form-group">
-                        <label for="">Message:</label>
-                        <textarea name="" placeholder="Input text..." id="message" class="form-control" required
-                        data-msg="Campo de preenchimento obrigatório"
-                        data-msg-minlength="Deverá escrever pelo menos 100 carateres" data-rule-minlength="100"></textarea>
-                     </div>
-                     <!-- Input Text Styles ends -->
                   </div>
                   <div class="col-md-6">
                      <div class="form-group">
-                        <label for="location">Please select a location</label>
-                        <div class="custom-select-option">
-                        <select name="location" id="location" class="form-control" required
-                           data-msg="Campo de preenchimento obrigatório">
-                           <option value="">Select a location</option>
-                           <option value="Portugal">Portugal</option>
-                           <option value="Oliveira de Azeméis">Oliveira de Azeméis</option>
-                           <option value="LOBA">LOBA</option>
-                           <option value="Portugal">Portugal</option>
-                           <option value="Portugal">Oliveira de Azeméis</option>
-                           <option value="Portugal">LOBA</option>
-                           <option value="Portugal">Portugal</option>
-                           <option value="Portugal">Oliveira de Azeméis</option>
-                           <option value="Portugal">LOBA</option>
-                           <option value="Portugal">Portugal</option>
-                           <option value="Portugal">Oliveira de Azeméis</option>
-                           <option value="Portugal">LOBA</option>
-                        </select>
-                        </div>
+                        <input type="text" name="position" placeholder="Position*" id="position" class="form-control" required="" data-msg="Required field">
                      </div>
-                     <!-- <div class="form-group">
-                        <label for="file">Please select a location</label>
-                        <div class="custom-file">
-                        <label for="file" class="custom-file__mask">Select file</label>
-                        <input type="file" name="file" id="file" class="form-control" multiple data-label="Select file"
-                           data-selected="%s files selected" required data-msg="Campo obrigatório">
-                        </div>
-                     </div> -->
-                     <div class="row">
-                        <!-- Checkbox inputs -->
-                        <div class="col-sm-6 col-lg-4">
-                        <div class="form-group">
-                           <input type="checkbox" name="check[]" id="check-1" value="" class="" required
-                              data-msg="este campo é obrigatório"><label for="" class="form-check-label">Checkbox Input</label>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group">
-                           <input type="checkbox" name="check[]" id="check-2" value="" class="" required
-                              data-msg="este campo é obrigatório"><label for="" class="form-check-label">Checkbox Input</label>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group">
-                           <input type="checkbox" name="check-3" id="check-3" value="" class="" disabled><label for=""
-                              class="form-check-label">Checkbox Input</label>
-                        </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-4">
-                        <!-- Radio inputs -->
-                        <div class="form-group">
-                           <input type="radio" name="radio" id="radio-1" value="" required
-                              data-msg="este campo é obrigatório"><label for="" class="form-check-label">Radio Input</label>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group">
-                           <input type="radio" name="radio" id="radio-2" value="" required><label for=""
-                              class="form-check-label">Radio Input</label>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group">
-                           <input type="radio" name="radio" id="radio-3" value="" required disabled><label for=""
-                              class="form-check-label">Radio Input</label>
-                        </div>
-                        </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="form-group">
+                        <input type="text" name="resume-title" placeholder="Resume title*" id="resume-title" class="form-control" required="" data-msg="Required field" data-msg-maxlength="50 words max" data-rule-maxlength="50">
+                        <span class="help">50 words max</span>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="form-group">
+                        <textarea name="" placeholder="Short resume *" id="message" class="form-control" required="" data-msg="Required field" data-msg-maxlength="150 words max" data-rule-maxlength="150"></textarea>
+                        <span class="help">150 words max</span>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <input type="text" name="linkedin" placeholder="LinkedIn" id="linkedin" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <input type="text" name="website" placeholder="Website" id="website" class="form-control">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <input type="email" name="email" placeholder="Contact email*" id="email" class="form-control" required="" data-msg-required="Required field" data-msg="Plese enter a valid email">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <label for="photo" class="form-control label-photo">
+                           <span class="">Photo</span>
+                           <i class="icon-upload"></i>
+                        </label>
+                        <input type="file" name="photo" placeholder="Photo" id="photo" class="form-control d-none">
+                     </div>
+                  </div>
+                  <div class="col-12">
+                     <div class="form-group">
+                        <input type="text" name="expertise-keywords" placeholder="Expertise keywords*" id="expertise-keywords" class="form-control" required="" data-msg-required="Required field" data-msg="Please, enter only 5 keywords">
+                        <span class="help">Descriptive of your area of expertise, max 5</span>
                      </div>
                   </div>
                </div>
+               <div class="row mt-5">
+                  <div class="col-12">
+                     <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="form-group">
+                           <input type="checkbox" name="privacy" id="privacy" value="" class="" required="" data-msg="Required field">
+                           <label for="privacy" class="form-check-label">I have read and agree with the <a href="">Terms and Conditions</a></label>
+                        </div>
 
-               <!-- if there is no rgpd pop up but a checkbox to accept the terms -->
-               <!-- <button class="btn btn-primary open-rgpd">Test Form Validation</button> -->
+                        <div class="d-flex justify-content-end">
+                           <button type="submit" class="btn btn-default">Apply here <i class="icon-arrow"></i></button>
+                        </div>
 
-               <!-- if there is an rgpd pop up and yes, a checkbox to accept the terms -->
-               <button type="submit" class="btn btn-primary main-btn-submit">Test Form Validation</button>
-
-
-
-               <div class="rgpd">
-               <h4 class="rgpd__title">Processing my personal data</h4>
-               <p>I authorize <b>Company</b> to store the data I have provided for the purpose of responding to my contact
-                  request. The information I am providing will be stored in accordance with our <a href="" title="">Privacy
-                     Policy</a> and with data protection regulations.</p>
-               <button class="btn btn-outline reject-rgpd">Refuse</button>
-
-
-               <!-- if there is an rgpd pop up and yes, a checkbox to accept the terms -->
-               <!-- <button class="btn btn-primary">Accept</button> -->
-
-               <!-- if there is no rgpd pop up but a checkbox to accept the terms -->
-               <button type="submit" id="btn-submit" class="btn btn-primary g-recaptcha" data-sitekey="<?php echo $BO_RECAPTCHA_SITEKEY ?>" data-callback="recaptchaData" data-action="submit">Accept</button>
+                     </div>
+                  </div>
                </div>
             </form>
          </div>
