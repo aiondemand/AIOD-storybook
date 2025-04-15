@@ -27,8 +27,7 @@
          <p class="mb-0 text-grey">Sed do eiusmod tempor incididunt ut labore et dolore </p>
       </div>
       <div class="border-bottom">
-         <p>Join our community, grow your knowledge and learn from others!</p>
-         <a class="btn btn-success btn-success--blue mt-3 w-100" href="">Sign In</a>
+         <a class="btn btn-success btn-success--blue mt-3 w-100" href="">Sign Out</a>
       </div>
    </div>
 </div>

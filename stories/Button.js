@@ -30,6 +30,9 @@ export const createButton = ({
   if(variant === 'underline'){
    btn.className = ['btn', 'btn-success'].join(' ');
   }
+  if(variant === 'underline-blue'){
+   btn.className = ['btn', 'btn-success', 'btn-success--blue'].join(' ');
+  }
 
   if(variant === 'circle'){
    btn.className = ['btn', 'btn-circle', 'btn-circle--yellow'].join(' ');

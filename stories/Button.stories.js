@@ -66,6 +66,14 @@ export const Underline = {
    },
  };
 
+ export const UnderlineBlue = {
+   args: {
+    variant: 'underline-blue',
+    label: 'About the project',
+   },
+ };
+
+
  export const Circle = {
    args: {
       variant: 'circle',
@@ -73,4 +81,5 @@ export const Underline = {
       icon: 'arrow',
    },
  };
+
 

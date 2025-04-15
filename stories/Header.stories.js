@@ -7,24 +7,29 @@ export default {
   tags: ['autodocs'],
 
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
-  render: (args) => createHeader(args),
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: 'fullscreen',
-  },
-  args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn(),
-  },
-};
+  render: ({ label, ...args }) => {
+      return createHeader({ label, ...args });
+   },
 
-export const LoggedIn = {
-  args: {
-    user: {
-      name: 'Nuno Alves',
+  argTypes: {
+   variant: {
+      control: { type: 'select' },
+      options: ['loggedin', 'loggedout'],
     },
   },
+  args: { onClick: fn() },
 };
 
-export const LoggedOut = {};
+
+export const LoggedIn = {
+   args: {
+       variant: 'loggedin',
+   },
+ };
+ 
+ export const LoggedOut = {
+    args: {
+        variant: 'loggedout',
+    },
+  };
+  

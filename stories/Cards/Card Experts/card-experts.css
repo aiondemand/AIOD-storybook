@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.card-news{
+   font-family: "Montserrat", sans-serif;
+}
+
+#story--componentes-cards-card--primary,
+#story--componentes-cards-card--primary--primary,
+#story--componentes-cards-card--news{
+   max-width: 350px !important;
+ }

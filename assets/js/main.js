@@ -793,24 +793,24 @@ if (links.length > 0) {
   });
 }
 
-// gsap.registerPlugin(ScrollTrigger);
-// const latestNews = document.querySelector(".card-latest-news-content");
-// if (latestNews) {
-//   gsap.from(".card-latest-news-content", {
-//     opacity: 0,
-//     duration: 1.5,
-//     stagger: 0.5,
-//     ease: "power2.out",
-//     y: 50,
-//     scrollTrigger: {
-//       trigger: ".card-latest-news-content",
-//       start: "top 80%",
-//       end: "bottom 10%",
-//       toggleActions: "restart none none none",
-//       markers: false,
-//     },
-//   });
-// }
+gsap.registerPlugin(ScrollTrigger);
+const latestNews = document.querySelector(".card-latest-news-content");
+if (latestNews) {
+  gsap.from(".card-latest-news-content", {
+    opacity: 0,
+    duration: 1.5,
+    stagger: 0.5,
+    ease: "power2.out",
+    y: 50,
+    scrollTrigger: {
+      trigger: ".card-latest-news-content",
+      start: "top 80%",
+      end: "bottom 10%",
+      toggleActions: "restart none none none",
+      markers: false,
+    },
+  });
+}
 
 const bannerHomepage = document.querySelector(".banner");
 if (bannerHomepage) {
