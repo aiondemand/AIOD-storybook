@@ -1,5 +1,5 @@
-import{f as d}from"./index-BDOojamX.js";const p=({variant:a})=>{const s=document.createElement("main");return s.className=["d-flex"].join(" "),s.innerHTML=`
-    <div class="sidebar ${a==="collapsed"?"collapsed":""}" id="sidebar">
+import{f as b}from"./index-BDOojamX.js";const m=({variant:s})=>{const e=document.createElement("main");return e.className=["d-flex"].join(" "),e.innerHTML=`
+    <div class="sidebar ${s==="collapsed"?"collapsed":""} scrollable" id="sidebar">
       <div class="sidebar-container">
          <div class="menu">
             <ul>
@@ -67,14 +67,14 @@ import{f as d}from"./index-BDOojamX.js";const p=({variant:a})=>{const s=document
                      </li>
                   </ul>
                </li>
-               <li class="has-submenu">
+               <li class="has-submenu ${s==="submenu-open"?"open":""}">
                   <span class="d-flex align-items-center justify-content-between sidebar-link">
                      <div><i class="icon-users"></i> <span>Community</span></div>
                      <span class="submenu-toggle">
                         <i class="icon-arrow-breadcrumb"></i>
                      </span>
                   </span>
-                  <ul class="submenu">
+                  <ul class="submenu ${s==="submenu-open"?"open":""}">
                      <li>
                         <a href="">
                            <i class="icon-file-text"></i>
@@ -86,10 +86,35 @@ import{f as d}from"./index-BDOojamX.js";const p=({variant:a})=>{const s=document
                            <i class="icon-map"></i>AI Ecosystem Map
                         </a>
                      </li>
-                     <li>
+                     <!-- <li>
                         <a href="">
                            <i class="icon-star"></i>Sucess Stories
                         </a>
+                     </li> -->
+                     <li class="has-submenu sub-submenu ${s==="submenu-open"?"open":""}">
+                        <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between  sub-submenu-link">
+                           <div><i class="icon-star"></i>Success Stories</div>
+                           <span class="submenu-toggle">
+                              <i class="icon-plus"></i>
+                           </span>
+                        </a>
+                        <ul class="submenu">
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Success Stories
+                              </a>
+                           </li>
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Research Areas
+                              </a>
+                           </li>
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Industry and Application Areas
+                              </a>
+                           </li>
+                        </ul>
                      </li>
                      <li>
                         <a href="">
@@ -153,12 +178,16 @@ import{f as d}from"./index-BDOojamX.js";const p=({variant:a})=>{const s=document
          </div>
       </div>
    </div>
-`,s},h={title:"Componentes/Sidebar",tags:["autodocs"],render:({label:a,...s})=>p({...s}),argTypes:{variant:{control:{type:"select"},options:["open","collapsed"]}},args:{onClick:d()}},e={args:{variant:"open"}},i={args:{variant:"collapsed"}};var o,t,r;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+`,e},g={title:"Componentes/Sidebar",tags:["autodocs"],render:({label:s,...e})=>m({...e}),argTypes:{variant:{control:{type:"select"},options:["open","collapsed","submenu-open"]}},args:{onClick:b()}},i={args:{variant:"open"}},a={args:{variant:"submenu-open"}},n={args:{variant:"collapsed"}};var o,r,t;i.parameters={...i.parameters,docs:{...(o=i.parameters)==null?void 0:o.docs,source:{originalSource:`{
   args: {
     variant: 'open'
   }
-}`,...(r=(t=e.parameters)==null?void 0:t.docs)==null?void 0:r.source}}};var n,l,c;i.parameters={...i.parameters,docs:{...(n=i.parameters)==null?void 0:n.docs,source:{originalSource:`{
+}`,...(t=(r=i.parameters)==null?void 0:r.docs)==null?void 0:t.source}}};var l,c,d;a.parameters={...a.parameters,docs:{...(l=a.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  args: {
+    variant: 'submenu-open'
+  }
+}`,...(d=(c=a.parameters)==null?void 0:c.docs)==null?void 0:d.source}}};var u,p,h;n.parameters={...n.parameters,docs:{...(u=n.parameters)==null?void 0:u.docs,source:{originalSource:`{
   args: {
     variant: 'collapsed'
   }
-}`,...(c=(l=i.parameters)==null?void 0:l.docs)==null?void 0:c.source}}};const k=["sidebarOpen","sidebarCollapsed"];export{k as __namedExportsOrder,h as default,i as sidebarCollapsed,e as sidebarOpen};
+}`,...(h=(p=n.parameters)==null?void 0:p.docs)==null?void 0:h.source}}};const w=["sidebarOpen","sidebarSubmenuOpen","sidebarCollapsed"];export{w as __namedExportsOrder,g as default,n as sidebarCollapsed,i as sidebarOpen,a as sidebarSubmenuOpen};

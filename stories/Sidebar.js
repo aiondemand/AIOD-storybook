@@ -7,7 +7,7 @@ export const createSidebar = ({
    const sidebar = document.createElement('main');
    sidebar.className = ['d-flex'].join(' ');
    sidebar.innerHTML = `
-    <div class="sidebar ${variant === 'collapsed' ? 'collapsed' : ''}" id="sidebar">
+    <div class="sidebar ${variant === 'collapsed' ? 'collapsed' : ''} scrollable" id="sidebar">
       <div class="sidebar-container">
          <div class="menu">
             <ul>
@@ -75,14 +75,14 @@ export const createSidebar = ({
                      </li>
                   </ul>
                </li>
-               <li class="has-submenu">
+               <li class="has-submenu ${variant === 'submenu-open' ? 'open' : ''}">
                   <span class="d-flex align-items-center justify-content-between sidebar-link">
                      <div><i class="icon-users"></i> <span>Community</span></div>
                      <span class="submenu-toggle">
                         <i class="icon-arrow-breadcrumb"></i>
                      </span>
                   </span>
-                  <ul class="submenu">
+                  <ul class="submenu ${variant === 'submenu-open' ? 'open' : ''}">
                      <li>
                         <a href="">
                            <i class="icon-file-text"></i>
@@ -94,10 +94,35 @@ export const createSidebar = ({
                            <i class="icon-map"></i>AI Ecosystem Map
                         </a>
                      </li>
-                     <li>
+                     <!-- <li>
                         <a href="">
                            <i class="icon-star"></i>Sucess Stories
                         </a>
+                     </li> -->
+                     <li class="has-submenu sub-submenu ${variant === 'submenu-open' ? 'open' : ''}">
+                        <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between  sub-submenu-link">
+                           <div><i class="icon-star"></i>Success Stories</div>
+                           <span class="submenu-toggle">
+                              <i class="icon-plus"></i>
+                           </span>
+                        </a>
+                        <ul class="submenu">
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Success Stories
+                              </a>
+                           </li>
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Research Areas
+                              </a>
+                           </li>
+                           <li>
+                              <a href="">
+                                 <span class="corner"></span>Industry and Application Areas
+                              </a>
+                           </li>
+                        </ul>
                      </li>
                      <li>
                         <a href="">

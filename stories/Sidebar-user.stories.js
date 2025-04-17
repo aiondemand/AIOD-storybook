@@ -31,11 +31,6 @@ export const sidebarOpen = {
   },
 };
 
-export const sidebarCollapsed = {
-   args: {
-       variant: 'collapsed',
-   },
- };
  
 
  

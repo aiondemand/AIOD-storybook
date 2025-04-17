@@ -14,7 +14,7 @@ export default {
   argTypes: {
    variant: {
       control: { type: 'select' },
-      options: ['loggedin', 'loggedout'],
+      options: ['dashboard', 'loggedout'],
     },
   },
   args: { onClick: fn() },
@@ -23,7 +23,7 @@ export default {
 
 export const LoggedIn = {
    args: {
-       variant: 'loggedin',
+       variant: 'dashboard',
    },
  };
  

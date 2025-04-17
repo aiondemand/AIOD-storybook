@@ -7,7 +7,7 @@ export const createSidebar = ({
    const sidebarUser = document.createElement('main');
    sidebarUser.className = ['d-flex'].join(' ');
    sidebarUser.innerHTML = `
-   <div class="sidebar sidebar-user ${variant === 'collapsed' ? 'collapsed' : ''}" id="sidebar-user">
+   <div class="sidebar sidebar-user" id="sidebar-user">
       <div class="menu">
          <ul>
             <li class="sidebar-link">

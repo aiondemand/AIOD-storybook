@@ -1,6 +1,7 @@
 
 <?php 
    $headerDashboard = true; 
+   $logged = true; 
    include "html_inicial.php"; 
 ?>
 <main class="d-flex">

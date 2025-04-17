@@ -1190,6 +1190,10 @@ $sidebar-collapsed-width: 75px;
       transition: all 300ms ease;
       z-index: 11111;
       transition: right 0.3s ease !important;
+      height: calc(100vh - 110px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       &.collapsed{
          right: -100%;
       }

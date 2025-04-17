@@ -17,7 +17,7 @@ export default {
   argTypes: {
    variant: {
       control: { type: 'select' },
-      options: ['open', 'collapsed'],
+      options: ['open', 'collapsed', 'submenu-open'],
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -30,6 +30,13 @@ export const sidebarOpen = {
       variant: 'open',
   },
 };
+
+export const sidebarSubmenuOpen = {
+   args: {
+       variant: 'submenu-open',
+   },
+ };
+ 
 
 export const sidebarCollapsed = {
    args: {

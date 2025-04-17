@@ -6,7 +6,7 @@ export const createHeader  = ({
 }) => {
   const header = document.createElement('header');
   header.id = 'header';
-  header.className = variant === 'loggedin' ? 'header-dashboard' : '';
+  header.className = variant === 'dashboard' ? 'header-dashboard' : '';
 
   header.innerHTML = `
   	<div class="container-fluid">
@@ -31,7 +31,7 @@ export const createHeader  = ({
 
                      <a href="index.php"><img src="../assets/img/logo-white.svg" alt="" class="logotipo"><img src="../assets/img/logo-cinza.svg" alt="" class="logotipo-grey d-none"></a>
 
-                      ${variant === 'loggedin' ? `
+                      ${variant === 'dashboard' ? `
                         <div id="collapseButton" class="d-none d-lg-flex">
                            <i class="icon-colapse"></i>
                         </div> `  : ''
@@ -40,7 +40,7 @@ export const createHeader  = ({
 
                      <a href="" class="btn btn btn-circle btn-circle--blue btn-search ml-5 mr-0 d-flex d-lg-none"><i class="icon-lupa"></i></a>
 
-                      ${variant === 'loggedin' ? `
+                      ${variant === 'dashboard' ? `
                            <div class="user-avatar-button user-avatar d-flex d-lg-none mr-0">
                               <div class="btn btn btn-circle btn-user ml-0 mr-0">
                                  <img src="../assets/img/user-image.jpeg" alt="">
@@ -106,7 +106,7 @@ export const createHeader  = ({
                      </div>` : ''
                      }
                      <div class="d-flex flex-lg-row menu-right">
-                        ${variant === 'loggedin' ? `
+                        ${variant === 'dashboard' ? `
                            <form id="customForm" class="search-input">
                               <input type="hidden" name="action" value="">
                               <div class="form-group">
@@ -118,7 +118,7 @@ export const createHeader  = ({
                         <a href="undefined" class="btn btn-default btn-user d-none d-lg-flex">Get Started</a>
 
 
-                         ${variant === 'loggedin' ? `
+                         ${variant === 'dashboard' ? `
                            <div class="user-avatar-button user-avatar d-none d-lg-flex">
                               <div class="btn btn btn-circle btn-user ml-2">
                                  <img src="../assets/img/user-image.jpeg" alt="">

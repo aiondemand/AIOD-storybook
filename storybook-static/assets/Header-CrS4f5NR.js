@@ -1,4 +1,4 @@
-/* empty css               */const i=({variant:e})=>{const s=document.createElement("header");return s.id="header",s.className=e==="loggedin"?"header-dashboard":"",s.innerHTML=`
+/* empty css               */const i=({variant:e})=>{const s=document.createElement("header");return s.id="header",s.className=e==="dashboard"?"header-dashboard":"",s.innerHTML=`
   	<div class="container-fluid">
         	<div class="row">
             <div class="col-12">
@@ -20,7 +20,7 @@
 
                      <a href="index.php"><img src="../assets/img/logo-white.svg" alt="" class="logotipo"><img src="../assets/img/logo-cinza.svg" alt="" class="logotipo-grey d-none"></a>
 
-                      ${e==="loggedin"?`
+                      ${e==="dashboard"?`
                         <div id="collapseButton" class="d-none d-lg-flex">
                            <i class="icon-colapse"></i>
                         </div> `:""}
@@ -28,7 +28,7 @@
 
                      <a href="" class="btn btn btn-circle btn-circle--blue btn-search ml-5 mr-0 d-flex d-lg-none"><i class="icon-lupa"></i></a>
 
-                      ${e==="loggedin"?`
+                      ${e==="dashboard"?`
                            <div class="user-avatar-button user-avatar d-flex d-lg-none mr-0">
                               <div class="btn btn btn-circle btn-user ml-0 mr-0">
                                  <img src="../assets/img/user-image.jpeg" alt="">
@@ -92,7 +92,7 @@
                      
                      </div>`:""}
                      <div class="d-flex flex-lg-row menu-right">
-                        ${e==="loggedin"?`
+                        ${e==="dashboard"?`
                            <form id="customForm" class="search-input">
                               <input type="hidden" name="action" value="">
                               <div class="form-group">
@@ -103,7 +103,7 @@
                         <a href="undefined" class="btn btn-default btn-user d-none d-lg-flex">Get Started</a>
 
 
-                         ${e==="loggedin"?`
+                         ${e==="dashboard"?`
                            <div class="user-avatar-button user-avatar d-none d-lg-flex">
                               <div class="btn btn btn-circle btn-user ml-2">
                                  <img src="../assets/img/user-image.jpeg" alt="">

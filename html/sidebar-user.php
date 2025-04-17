@@ -1,4 +1,4 @@
-<div class="sidebar sidebar-user collapsed" id="sidebar-user">
+<div class="sidebar sidebar-user collapsed scrollable" id="sidebar-user">
    <div class="menu">
    <ul>
       <li class="sidebar-link">

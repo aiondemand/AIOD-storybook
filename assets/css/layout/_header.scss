@@ -968,6 +968,10 @@ input+.slider {
 
 [data-theme="light"] {
 
+   .corner{
+      border-color: #00000066 !important;
+   }
+
    input+.slider {
       &:before {
          transform: translateX(0);
@@ -1189,8 +1193,11 @@ $sidebar-collapsed-width: 75px;
       right: 0;
       transition: all 300ms ease;
       z-index: 11111;
+      overflow-y: scroll;
+      border: 1px solid #1B2336;
+      border-top: 0 !important;
       transition: right 0.3s ease !important;
-      height: calc(100vh - 110px);
+      height: calc( 100vh - 110px );
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1323,6 +1330,47 @@ $sidebar-collapsed-width: 75px;
    }
 }
 
+// Estilo base para o sub-submenu
+.sub-submenu {
+   padding-left: 20px; // Indenta o sub-submenu
+ 
+   .submenu {
+     display: none;
+     padding-left: 10px; // Indenta os itens do sub-submenu
+     list-style: none;
+     margin-top: 15px;
+   }
+ 
+   &.open > .submenu {
+     display: block; // Exibe o sub-submenu quando o pai tem a classe 'open'
+   }
+
+   &-link{
+      padding-right: 30px;
+   }
+
+   .corner{
+      width: 14px;
+      height: 10px;
+      display: inline-block;
+      border-left: 1px solid #FFFFFF66;
+      border-bottom: 1px solid #FFFFFF66;
+      margin-right: 10px;
+   }
+
+ 
+   .submenu-toggle {
+     transition: transform 0.3s ease;
+     i{
+      font-size: 12px;
+     }
+ 
+     // Rotação da seta quando o sub-submenu está aberto
+     .sub-submenu.open & {
+       transform: rotate(90deg);
+     }
+   }
+ }
 
 .sidebar-footer > div{
    padding: 40px 30px;
@@ -1342,6 +1390,24 @@ $sidebar-collapsed-width: 75px;
    a{
       opacity: 1;
       transition: opacity 300ms ease 200ms;
+   }
+}
+
+.scrollable {
+   scrollbar-width: thin;
+   scrollbar-color: #010714 transparent;
+   &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+   }
+
+   &::-webkit-scrollbar-track {
+      background: transparent;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: #010714;
+      border-radius: 10px;
    }
 }
 

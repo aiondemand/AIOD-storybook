@@ -1,5 +1,5 @@
-import{f as l}from"./index-BDOojamX.js";const p=({variant:r})=>{const s=document.createElement("main");return s.className=["d-flex"].join(" "),s.innerHTML=`
-   <div class="sidebar sidebar-user ${r==="collapsed"?"collapsed":""}" id="sidebar-user">
+import{f as o}from"./index-BDOojamX.js";const n=({variant:t})=>{const s=document.createElement("main");return s.className=["d-flex"].join(" "),s.innerHTML=`
+   <div class="sidebar sidebar-user" id="sidebar-user">
       <div class="menu">
          <ul>
             <li class="sidebar-link">
@@ -32,12 +32,8 @@ import{f as l}from"./index-BDOojamX.js";const p=({variant:r})=>{const s=document
          </div>
       </div>
    </div>
-`,s},b={title:"Componentes/Sidebar User",tags:["autodocs"],render:({label:r,...s})=>p({...s}),argTypes:{variant:{control:{type:"select"},options:["open","collapsed"]}},args:{onClick:l()}},e={args:{variant:"open"}},a={args:{variant:"collapsed"}};var i,o,t;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`{
+`,s},c={title:"Componentes/Sidebar User",tags:["autodocs"],render:({label:t,...s})=>n({...s}),argTypes:{variant:{control:{type:"select"},options:["open","collapsed"]}},args:{onClick:o()}},e={args:{variant:"open"}};var i,a,r;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`{
   args: {
     variant: 'open'
   }
-}`,...(t=(o=e.parameters)==null?void 0:o.docs)==null?void 0:t.source}}};var n,d,c;a.parameters={...a.parameters,docs:{...(n=a.parameters)==null?void 0:n.docs,source:{originalSource:`{
-  args: {
-    variant: 'collapsed'
-  }
-}`,...(c=(d=a.parameters)==null?void 0:d.docs)==null?void 0:c.source}}};const u=["sidebarOpen","sidebarCollapsed"];export{u as __namedExportsOrder,b as default,a as sidebarCollapsed,e as sidebarOpen};
+}`,...(r=(a=e.parameters)==null?void 0:a.docs)==null?void 0:r.source}}};const l=["sidebarOpen"];export{l as __namedExportsOrder,c as default,e as sidebarOpen};

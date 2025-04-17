@@ -1,4 +1,4 @@
-import{w as d,e as r,u}from"./index-BDOojamX.js";import{c as h}from"./Header-ZCDK7bkf.js";import"https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap";/* empty css               */const v=()=>{const e=document.createElement("article");let t=null;return t=h({}),e.appendChild(t),e.insertAdjacentHTML("beforeend",`
+import{w as d,e as r,u}from"./index-BDOojamX.js";import{c as h}from"./Header-CrS4f5NR.js";import"https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap";/* empty css               */const v=()=>{const e=document.createElement("article");let t=null;return t=h({}),e.appendChild(t),e.insertAdjacentHTML("beforeend",`
   <section class="storybook-page">
     <h2>Pages in Storybook</h2>
     <p>

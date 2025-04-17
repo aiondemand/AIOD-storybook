@@ -1,4 +1,4 @@
-<div class="sidebar collapsed" id="sidebar">
+<div class="sidebar collapsed scrollable" id="sidebar">
    <div class="sidebar-container">
       <div class="menu">
          <ul>
@@ -85,10 +85,35 @@
                         <i class="icon-map"></i>AI Ecosystem Map
                      </a>
                   </li>
-                  <li>
+                  <!-- <li>
                      <a href="">
                         <i class="icon-star"></i>Sucess Stories
                      </a>
+                  </li> -->
+                  <li class="has-submenu sub-submenu">
+                     <a href="javascript:void(0)" class="d-flex align-items-center justify-content-between  sub-submenu-link">
+                        <div><i class="icon-star"></i>Success Stories</div>
+                        <span class="submenu-toggle">
+                           <i class="icon-plus"></i>
+                        </span>
+                     </a>
+                     <ul class="submenu">
+                        <li>
+                           <a href="">
+                              <span class="corner"></span>Success Stories
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              <span class="corner"></span>Research Areas
+                           </a>
+                        </li>
+                        <li>
+                           <a href="">
+                              <span class="corner"></span>Industry and Application Areas
+                           </a>
+                        </li>
+                     </ul>
                   </li>
                   <li>
                      <a href="">

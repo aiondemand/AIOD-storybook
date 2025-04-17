@@ -1078,3 +1078,25 @@ function updatePaginationPosition() {
 
 window.addEventListener("resize", updatePaginationPosition);
 window.addEventListener('load', updatePaginationPosition);
+
+
+document.querySelectorAll('.sub-submenu > .sub-submenu-link').forEach(link => {
+   link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      // Impede que o clique afete o elemento pai
+      e.stopPropagation();
+
+      // Fecha apenas os sub-submenus abertos dentro do mesmo nível
+      const parent = this.parentElement;
+      const siblingSubmenus = parent.parentElement.querySelectorAll('.sub-submenu.open');
+      siblingSubmenus.forEach(openItem => {
+         if (openItem !== parent) {
+            openItem.classList.remove('open');
+         }
+      });
+
+      // Alterna o estado do sub-submenu atual
+      parent.classList.toggle('open');
+   });
+});
