@@ -42,7 +42,7 @@ export const createCardSimple = ({
          <div class="card-news-content d-flex align-items-center justify-content-between">
             <span class="category">${category}</span>
             <div class="tag-container tag-container--blue position-relative w-auto">
-               <span class="tag tag--blue m-0">${tag}</span>
+               <span class="tag-default tag--blue m-0">${tag}</span>
             </div>
          </div>
          <div class="card-news-content ${variant === 'services' ? 'mt-5' : ''}">

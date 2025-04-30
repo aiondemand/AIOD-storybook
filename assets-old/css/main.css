@@ -11099,7 +11099,7 @@ h6, .h6 {
   background: transparent;
   position: relative;
 }
-.card-news .tag-container .tag {
+.card-news .tag-container .tag-default {
   font-size: 14px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
@@ -11181,7 +11181,7 @@ h6, .h6 {
   width: auto;
   margin-left: 24px;
 }
-.card-horizontal .card-news-container .tag-container .tag {
+.card-horizontal .card-news-container .tag-container .tag-default {
   margin: 0;
   font-size: 13px;
 }
@@ -11422,7 +11422,7 @@ h6, .h6 {
 [data-theme=light] .card-horizontal .card-news-container .tag-container {
   background: transparent;
 }
-[data-theme=light] .card-horizontal .card-news-container .tag-container .tag {
+[data-theme=light] .card-horizontal .card-news-container .tag-container .tag-default {
   color: #000;
   border-color: #000;
 }
@@ -17929,7 +17929,7 @@ input + .slider:before {
   font-weight: 600;
   color: #0047BB;
 }
-.about-history .historySlider .swiper-slide .tag {
+.about-history .historySlider .swiper-slide .tag-default {
   margin-top: 50px;
 }
 .about .hero {

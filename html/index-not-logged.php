@@ -34,7 +34,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -52,7 +52,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -70,7 +70,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -88,7 +88,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -106,7 +106,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -124,7 +124,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -142,7 +142,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -160,7 +160,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -178,7 +178,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">

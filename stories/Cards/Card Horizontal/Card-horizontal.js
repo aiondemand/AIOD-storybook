@@ -86,7 +86,7 @@ export const createCardHorizontal = ({
                   ${tag ? `
                      
                      <div class="tag-container">
-                        <span class="tag">${tag}</span>
+                        <span class="tag-default">${tag}</span>
                      </div>` 
                   : ''}
                   ${date ? `

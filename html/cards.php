@@ -85,7 +85,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container tag-container--blue">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag tag--blue">Categorie here</span>
+                        <span class="tag-default tag--blue">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -105,7 +105,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                   </div> -->
                   <div class="tag-container no-image tag-container--blue">
-                        <span class="tag tag--blue">Categorie here</span>
+                        <span class="tag-default tag--blue">Categorie here</span>
                      </div>
                   <div class="card-news-content">
                      <!-- <span class="category">Ai4Industry</span> -->
@@ -207,7 +207,7 @@
                      <img src="../assets/img/card-image.jpeg" alt="">
                      <div class="tag-container">
                         <!-- Se não tiver tag, nao renderizar esta span -->
-                        <span class="tag">Categorie here</span>
+                        <span class="tag-default">Categorie here</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -300,7 +300,7 @@
                   <div class="card-news-content d-flex align-items-center justify-content-between">
                      <span class="category">video</span>
                      <div class="tag-container tag-container--blue position-relative w-auto">
-                        <span class="tag tag--blue m-0">Beginer Level</span>
+                        <span class="tag-default tag--blue m-0">Beginer Level</span>
                      </div>
                   </div>
                   <div class="card-news-content">
@@ -345,7 +345,7 @@
                   <div class="card-news-content d-flex align-items-center justify-content-between">
                      <span class="category">Services</span>
                      <div class="tag-container tag-container--blue position-relative w-auto">
-                        <span class="tag tag--blue m-0">AIoD</span>
+                        <span class="tag-default tag--blue m-0">AIoD</span>
                      </div>
                   </div>
                   <div class="card-news-content mt-5">
@@ -454,7 +454,7 @@
                                  <span><strong>Availability v1.1</strong></span>
                               </div>
                               <div class="tag-container">
-                                 <span class="tag">Related Resources</span>
+                                 <span class="tag-default">Related Resources</span>
                               </div>
                               <div class="btn-icon">
                                  <i class="icon-clock"></i>

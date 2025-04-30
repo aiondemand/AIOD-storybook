@@ -31,12 +31,12 @@ export const createCard = ({
       <div class="card-news-image">
          <img src="${image}" alt="${imageAlt}">
          <div class="tag-container ${variant === 'news' ? 'tag-container--blue' : ''}">
-            ${tag ? `<span class="tag ${variant === 'news' ? 'tag--blue' : ''}">${tag}</span>` : ""}
+            ${tag ? `<span class="tag-default ${variant === 'news' ? 'tag--blue' : ''}">${tag}</span>` : ""}
          </div>
       </div>
    ` : `
       <div class="tag-container no-image ${variant === 'news' ? 'tag-container--blue' : ''}">
-         ${tag ? `<span class="tag ${variant === 'news' ? 'tag--blue' : ''}">${tag}</span>` : ""}
+         ${tag ? `<span class="tag-default ${variant === 'news' ? 'tag--blue' : ''}">${tag}</span>` : ""}
       </div>
    `}
          <div class="card-news-content">

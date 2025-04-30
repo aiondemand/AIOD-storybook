@@ -8,12 +8,12 @@ import{f as h}from"./index-BDOojamX.js";const C=({image:e,title:a,imageAlt:o,tag
       <div class="card-news-image">
          <img src="${e}" alt="${o}">
          <div class="tag-container ${t==="news"?"tag-container--blue":""}">
-            ${r?`<span class="tag ${t==="news"?"tag--blue":""}">${r}</span>`:""}
+            ${r?`<span class="tag-default ${t==="news"?"tag--blue":""}">${r}</span>`:""}
          </div>
       </div>
    `:`
       <div class="tag-container no-image ${t==="news"?"tag-container--blue":""}">
-         ${r?`<span class="tag ${t==="news"?"tag--blue":""}">${r}</span>`:""}
+         ${r?`<span class="tag-default ${t==="news"?"tag--blue":""}">${r}</span>`:""}
       </div>
    `}
          <div class="card-news-content">

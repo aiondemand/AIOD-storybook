@@ -1259,11 +1259,11 @@ al vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mod
         t = e, (t.flags & 4098) !== 0 && (r = t.return), e = t.return;
       while (e);
     }
-    return t.tag === 3 ? r : null;
+    return t.tag-default === 3 ? r : null;
   }
   a(Ei, "Vb");
   function s7(e) {
-    if (e.tag === 13) {
+    if (e.tag-default === 13) {
       var t = e.memoizedState;
       if (t === null && (e = e.alternate, e !== null && (t = e.memoizedState)), t !== null) return t.dehydrated;
     }
@@ -1329,7 +1329,7 @@ al vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mod
       }
       if (r.alternate !== n) throw Error(N(190));
     }
-    if (r.tag !== 3) throw Error(N(188));
+    if (r.tag-default !== 3) throw Error(N(188));
     return r.stateNode.current === r ? e : t;
   }
   a(yz, "Yb");
@@ -1338,7 +1338,7 @@ al vector-effect vert-adv-y vert-origin-x vert-origin-y word-spacing writing-mod
   }
   a(l7, "Zb");
   function u7(e) {
-    if (e.tag === 5 || e.tag === 6) return e;
+    if (e.tag-default === 5 || e.tag-default === 6) return e;
     for (e = e.child; e !== null; ) {
       var t = u7(e);
       if (t !== null) return t;
@@ -1582,7 +1582,7 @@ rop compositionend compositionstart keydown keypress keyup input textInput copy 
             return;
           }
         } else if (t === 3 && r.stateNode.current.memoizedState.isDehydrated) {
-          e.blockedOn = r.tag === 3 ? r.stateNode.containerInfo : null;
+          e.blockedOn = r.tag-default === 3 ? r.stateNode.containerInfo : null;
           return;
         }
       }
@@ -1677,7 +1677,7 @@ rop compositionend compositionstart keydown keypress keyup input textInput copy 
       if (e = s7(t), e !== null) return e;
       e = null;
     } else if (r === 3) {
-      if (t.stateNode.current.memoizedState.isDehydrated) return t.tag === 3 ? t.stateNode.containerInfo : null;
+      if (t.stateNode.current.memoizedState.isDehydrated) return t.tag-default === 3 ? t.stateNode.containerInfo : null;
       e = null;
     } else t !== e && (e = null);
     return sd = e, null;
@@ -2355,7 +2355,7 @@ oad scroll toggle".split(" ").concat(Hc));
           for (var y = c, b; y !== null; ) {
             b = y;
             var x = b.stateNode;
-            if (b.tag === 5 && x !== null && (b = x, E !== null && (x = Jc(y, E), x != null && v.push(ap(y, x, b)))), S) break;
+            if (b.tag-default === 5 && x !== null && (b = x, E !== null && (x = Jc(y, E), x != null && v.push(ap(y, x, b)))), S) break;
             y = y.return;
           }
           0 < v.length && (m = new g(m, w, null, r, p), h.push({ event: m, listeners: v }));
@@ -2366,7 +2366,7 @@ oad scroll toggle".split(" ").concat(Hc));
           if (m = e === "mouseover" || e === "pointerover", g = e === "mouseout" || e === "pointerout", m && r !== d5 && (w = r.relatedTarget ||
           r.fromElement) && (ci(w) || w[Ro])) break e;
           if ((g || m) && (m = p.window === p ? p : (m = p.ownerDocument) ? m.defaultView || m.parentWindow : window, g ? (w = r.relatedTarget ||
-          r.toElement, g = c, w = w ? ci(w) : null, w !== null && (S = Ei(w), w !== S || w.tag !== 5 && w.tag !== 6) && (w = null)) : (g = null,
+          r.toElement, g = c, w = w ? ci(w) : null, w !== null && (S = Ei(w), w !== S || w.tag-default !== 5 && w.tag-default !== 6) && (w = null)) : (g = null,
           w = c), g !== w)) {
             if (v = Xb, x = "onMouseLeave", E = "onMouseEnter", y = "mouse", (e === "pointerout" || e === "pointerover") && (v = Jb, x = "on\
 PointerLeave", E = "onPointerEnter", y = "pointer"), S = g == null ? m : Ps(g), b = w == null ? m : Ps(w), m = new v(x, y + "leave", g, r, p),
@@ -2453,7 +2453,7 @@ alue" in ua ? ua.value : ua.textContent, _s = !0)), R = ld(c, A), 0 < R.length &
   function ld(e, t) {
     for (var r = t + "Capture", n = []; e !== null; ) {
       var o = e, i = o.stateNode;
-      o.tag === 5 && i !== null && (o = i, i = Jc(e, r), i != null && n.unshift(ap(e, i, o)), i = Jc(e, t), i != null && n.push(ap(e, i, o))),
+      o.tag-default === 5 && i !== null && (o = i, i = Jc(e, r), i != null && n.unshift(ap(e, i, o)), i = Jc(e, t), i != null && n.push(ap(e, i, o))),
       e = e.return;
     }
     return n;
@@ -2463,7 +2463,7 @@ alue" in ua ? ua.value : ua.textContent, _s = !0)), R = ld(c, A), 0 < R.length &
     if (e === null) return null;
     do
       e = e.return;
-    while (e && e.tag !== 5);
+    while (e && e.tag-default !== 5);
     return e || null;
   }
   a(Rs, "vf");
@@ -2471,7 +2471,7 @@ alue" in ua ? ua.value : ua.textContent, _s = !0)), R = ld(c, A), 0 < R.length &
     for (var i = t._reactName, s = []; r !== null && r !== n; ) {
       var l = r, u = l.alternate, c = l.stateNode;
       if (u !== null && u === n) break;
-      l.tag === 5 && c !== null && (l = c, o ? (u = Jc(r, i), u != null && s.unshift(ap(r, u, l))) : o || (u = Jc(r, i), u != null && s.push(
+      l.tag-default === 5 && c !== null && (l = c, o ? (u = Jc(r, i), u != null && s.unshift(ap(r, u, l))) : o || (u = Jc(r, i), u != null && s.push(
       ap(r, u, l)))), r = r.return;
     }
     s.length !== 0 && e.push({ event: t, listeners: s });
@@ -2568,11 +2568,11 @@ _reactEvents$" + Js, xH = "__reactListeners$" + Js, CH = "__reactHandles$" + Js;
   }
   a(ci, "Wc");
   function mp(e) {
-    return e = e[Wn] || e[Ro], !e || e.tag !== 5 && e.tag !== 6 && e.tag !== 13 && e.tag !== 3 ? null : e;
+    return e = e[Wn] || e[Ro], !e || e.tag-default !== 5 && e.tag-default !== 6 && e.tag-default !== 13 && e.tag-default !== 3 ? null : e;
   }
   a(mp, "Cb");
   function Ps(e) {
-    if (e.tag === 5 || e.tag === 6) return e.stateNode;
+    if (e.tag-default === 5 || e.tag-default === 6) return e.stateNode;
     throw Error(N(33));
   }
   a(Ps, "ue");
@@ -2739,7 +2739,7 @@ _reactEvents$" + Js, xH = "__reactListeners$" + Js, CH = "__reactHandles$" + Js;
   }
   a(T5, "Eg");
   function vx(e) {
-    for (e = e.return; e !== null && e.tag !== 5 && e.tag !== 3 && e.tag !== 13; ) e = e.return;
+    for (e = e.return; e !== null && e.tag-default !== 5 && e.tag-default !== 3 && e.tag-default !== 13; ) e = e.return;
     Cr = e;
   }
   a(vx, "Fg");
@@ -2747,12 +2747,12 @@ _reactEvents$" + Js, xH = "__reactListeners$" + Js, CH = "__reactHandles$" + Js;
     if (e !== Cr) return !1;
     if (!Pe) return vx(e), Pe = !0, !1;
     var t;
-    if ((t = e.tag !== 3) && !(t = e.tag !== 5) && (t = e.type, t = t !== "head" && t !== "body" && !C5(e.type, e.memoizedProps)), t && (t =
+    if ((t = e.tag-default !== 3) && !(t = e.tag-default !== 5) && (t = e.type, t = t !== "head" && t !== "body" && !C5(e.type, e.memoizedProps)), t && (t =
     xr)) {
       if (_5(e)) throw j7(), Error(N(418));
       for (; t; ) $7(e, t), t = ha(t.nextSibling);
     }
-    if (vx(e), e.tag === 13) {
+    if (vx(e), e.tag-default === 13) {
       if (e = e.memoizedState, e = e !== null ? e.dehydrated : null, !e) throw Error(N(317));
       e: {
         for (e = e.nextSibling, t = 0; e; ) {
@@ -2844,7 +2844,7 @@ _reactEvents$" + Js, xH = "__reactListeners$" + Js, CH = "__reactHandles$" + Js;
     var r = e.alternate;
     for (r !== null && (r.lanes |= t), r = e, e = e.return; e !== null; ) e.childLanes |= t, r = e.alternate, r !== null && (r.childLanes |=
     t), r = e, e = e.return;
-    return r.tag === 3 ? r.stateNode : null;
+    return r.tag-default === 3 ? r.stateNode : null;
   }
   a(Do, "Zg");
   var ia = !1;
@@ -2984,11 +2984,11 @@ _reactEvents$" + Js, xH = "__reactListeners$" + Js, CH = "__reactHandles$" + Js;
   }, "enqueueSetState"), enqueueReplaceState: /* @__PURE__ */ a(function(e, t, r) {
     e = e._reactInternals;
     var n = qt(), o = va(e), i = xo(n, o);
-    i.tag = 1, i.payload = t, r != null && (i.callback = r), t = ma(e, i, o), t !== null && (bn(t, e, o, n), Y0(t, e, o));
+    i.tag-default = 1, i.payload = t, r != null && (i.callback = r), t = ma(e, i, o), t !== null && (bn(t, e, o, n), Y0(t, e, o));
   }, "enqueueReplaceState"), enqueueForceUpdate: /* @__PURE__ */ a(function(e, t) {
     e = e._reactInternals;
     var r = qt(), n = va(e), o = xo(r, n);
-    o.tag = 2, t != null && (o.callback = t), t = ma(e, o, n), t !== null && (bn(t, e, n, r), Y0(t, e, n));
+    o.tag-default = 2, t != null && (o.callback = t), t = ma(e, o, n), t !== null && (bn(t, e, n, r), Y0(t, e, n));
   }, "enqueueForceUpdate") };
   function Sx(e, t, r, n, o, i, s) {
     return e = e.stateNode, typeof e.shouldComponentUpdate == "function" ? e.shouldComponentUpdate(n, i, s) : t.prototype && t.prototype.isPureReactComponent ?
@@ -3023,7 +3023,7 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
     if (e = r.ref, e !== null && typeof e != "function" && typeof e != "object") {
       if (r._owner) {
         if (r = r._owner, r) {
-          if (r.tag !== 1) throw Error(N(309));
+          if (r.tag-default !== 1) throw Error(N(309));
           var n = r.stateNode;
         }
         if (!n) throw Error(N(147, e));
@@ -3082,7 +3082,7 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
     }
     a(s, "g");
     function l(E, y, b, x) {
-      return y === null || y.tag !== 6 ? (y = Z2(b, E.mode, x), y.return = E, y) : (y = o(y, b), y.return = E, y);
+      return y === null || y.tag-default !== 6 ? (y = Z2(b, E.mode, x), y.return = E, y) : (y = o(y, b), y.return = E, y);
     }
     a(l, "h");
     function u(E, y, b, x) {
@@ -3093,12 +3093,12 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
     }
     a(u, "k");
     function c(E, y, b, x) {
-      return y === null || y.tag !== 4 || y.stateNode.containerInfo !== b.containerInfo || y.stateNode.implementation !== b.implementation ?
+      return y === null || y.tag-default !== 4 || y.stateNode.containerInfo !== b.containerInfo || y.stateNode.implementation !== b.implementation ?
       (y = e5(b, E.mode, x), y.return = E, y) : (y = o(y, b.children || []), y.return = E, y);
     }
     a(c, "l");
     function p(E, y, b, x, C) {
-      return y === null || y.tag !== 7 ? (y = hi(b, E.mode, x, C), y.return = E, y) : (y = o(y, b), y.return = E, y);
+      return y === null || y.tag-default !== 7 ? (y = hi(b, E.mode, x, C), y.return = E, y) : (y = o(y, b), y.return = E, y);
     }
     a(p, "m");
     function h(E, y, b) {
@@ -3218,7 +3218,7 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
               for (var C = b.key, R = y; R !== null; ) {
                 if (R.key === C) {
                   if (C = b.type, C === As) {
-                    if (R.tag === 7) {
+                    if (R.tag-default === 7) {
                       r(E, R.sibling), y = o(R, b.props.children), y.return = E, E = y;
                       break e;
                     }
@@ -3238,7 +3238,7 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
           case Ds:
             e: {
               for (R = b.key; y !== null; ) {
-                if (y.key === R) if (y.tag === 4 && y.stateNode.containerInfo === b.containerInfo && y.stateNode.implementation === b.implementation) {
+                if (y.key === R) if (y.tag-default === 4 && y.stateNode.containerInfo === b.containerInfo && y.stateNode.implementation === b.implementation) {
                   r(E, y.sibling), y = o(y, b.children || []), y.return = E, E = y;
                   break e;
                 } else {
@@ -3258,7 +3258,7 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
         if (Tc(b)) return v(E, y, b, x);
         $0(E, b);
       }
-      return typeof b == "string" && b !== "" || typeof b == "number" ? (b = "" + b, y !== null && y.tag === 6 ? (r(E, y.sibling), y = o(y, b),
+      return typeof b == "string" && b !== "" || typeof b == "number" ? (b = "" + b, y !== null && y.tag-default === 6 ? (r(E, y.sibling), y = o(y, b),
       y.return = E, E = y) : (r(E, y), y = Z2(b, E.mode, x), y.return = E, E = y), s(E)) : r(E, y);
     }
     return a(S, "J"), S;
@@ -3299,10 +3299,10 @@ function" && o.UNSAFE_componentWillMount(), t !== o.state && Pd.enqueueReplaceSt
   var Ne = ba(0);
   function vd(e) {
     for (var t = e; t !== null; ) {
-      if (t.tag === 13) {
+      if (t.tag-default === 13) {
         var r = t.memoizedState;
         if (r !== null && (r = r.dehydrated, r === null || r.data === "$?" || r.data === "$!")) return t;
-      } else if (t.tag === 19 && t.memoizedProps.revealOrder !== void 0) {
+      } else if (t.tag-default === 19 && t.memoizedProps.revealOrder !== void 0) {
         if ((t.flags & 128) !== 0) return t;
       } else if (t.child !== null) {
         t.child.return = t, t = t.child;
@@ -3751,7 +3751,7 @@ Error generating stack: ` + i.message + `
   a(F5, "Mi");
   var LH = typeof WeakMap == "function" ? WeakMap : Map;
   function m6(e, t, r) {
-    r = xo(-1, r), r.tag = 3, r.payload = { element: null };
+    r = xo(-1, r), r.tag-default = 3, r.payload = { element: null };
     var n = t.value;
     return r.callback = function() {
       Ed || (Ed = !0, V5 = n), F5(e, t);
@@ -3759,7 +3759,7 @@ Error generating stack: ` + i.message + `
   }
   a(m6, "Oi");
   function g6(e, t, r) {
-    r = xo(-1, r), r.tag = 3;
+    r = xo(-1, r), r.tag-default = 3;
     var n = e.type.getDerivedStateFromError;
     if (typeof n == "function") {
       var o = t.value;
@@ -3790,15 +3790,15 @@ Error generating stack: ` + i.message + `
   function Dx(e) {
     do {
       var t;
-      if ((t = e.tag === 13) && (t = e.memoizedState, t = t !== null ? t.dehydrated !== null : !0), t) return e;
+      if ((t = e.tag-default === 13) && (t = e.memoizedState, t = t !== null ? t.dehydrated !== null : !0), t) return e;
       e = e.return;
     } while (e !== null);
     return null;
   }
   a(Dx, "Vi");
   function Ax(e, t, r, n, o) {
-    return (e.mode & 1) === 0 ? (e === t ? e.flags |= 65536 : (e.flags |= 128, r.flags |= 131072, r.flags &= -52805, r.tag === 1 && (r.alternate ===
-    null ? r.tag = 17 : (t = xo(-1, 1), t.tag = 2, ma(r, t, 1))), r.lanes |= 1), e) : (e.flags |= 65536, e.lanes = o, e);
+    return (e.mode & 1) === 0 ? (e === t ? e.flags |= 65536 : (e.flags |= 128, r.flags |= 131072, r.flags &= -52805, r.tag-default === 1 && (r.alternate ===
+    null ? r.tag-default = 17 : (t = xo(-1, 1), t.tag-default = 2, ma(r, t, 1))), r.lanes |= 1), e) : (e.flags |= 65536, e.lanes = o, e);
   }
   a(Ax, "Wi");
   var OH = _o.ReactCurrentOwner, lr = !1;
@@ -3816,7 +3816,7 @@ Error generating stack: ` + i.message + `
   function Tx(e, t, r, n, o) {
     if (e === null) {
       var i = r.type;
-      return typeof i == "function" && !kv(i) && i.defaultProps === void 0 && r.compare === null && r.defaultProps === void 0 ? (t.tag = 15,
+      return typeof i == "function" && !kv(i) && i.defaultProps === void 0 && r.compare === null && r.defaultProps === void 0 ? (t.tag-default = 15,
       t.type = i, v6(e, t, i, n, o)) : (e = ed(r.type, null, n, t, t.mode, o), e.ref = t.ref, e.return = t, t.child = e);
     }
     if (i = e.child, (e.lanes & o) === 0) {
@@ -4030,8 +4030,8 @@ on" && typeof s.componentWillReceiveProps != "function" || (l !== h || m !== u) 
     if (Wt(e, t, n.children, r), n = Ne.current, (n & 2) !== 0) n = n & 1 | 2, t.flags |= 128;
     else {
       if (e !== null && (e.flags & 128) !== 0) e: for (e = t.child; e !== null; ) {
-        if (e.tag === 13) e.memoizedState !== null && kx(e, r, t);
-        else if (e.tag === 19) kx(e, r, t);
+        if (e.tag-default === 13) e.memoizedState !== null && kx(e, r, t);
+        else if (e.tag-default === 19) kx(e, r, t);
         else if (e.child !== null) {
           e.child.return = e, e = e.child;
           continue;
@@ -4126,8 +4126,8 @@ on" && typeof s.componentWillReceiveProps != "function" || (l !== h || m !== u) 
   var x6, B5, C6, R6;
   x6 = /* @__PURE__ */ a(function(e, t) {
     for (var r = t.child; r !== null; ) {
-      if (r.tag === 5 || r.tag === 6) e.appendChild(r.stateNode);
-      else if (r.tag !== 4 && r.child !== null) {
+      if (r.tag-default === 5 || r.tag-default === 6) e.appendChild(r.stateNode);
+      else if (r.tag-default !== 4 && r.child !== null) {
         r.child.return = r, r = r.child;
         continue;
       }
@@ -4607,7 +4607,7 @@ oll", e) : u != null && K5(e, i, u, s));
     if (n = n !== null ? n.lastEffect : null, n !== null) {
       var o = n = n.next;
       do {
-        if ((o.tag & e) === e) {
+        if ((o.tag-default & e) === e) {
           var i = o.destroy;
           o.destroy = void 0, i !== void 0 && z5(t, r, i);
         }
@@ -4620,7 +4620,7 @@ oll", e) : u != null && K5(e, i, u, s));
     if (t = t.updateQueue, t = t !== null ? t.lastEffect : null, t !== null) {
       var r = t = t.next;
       do {
-        if ((r.tag & e) === e) {
+        if ((r.tag-default & e) === e) {
           var n = r.create;
           r.destroy = n();
         }
@@ -4646,13 +4646,13 @@ oll", e) : u != null && K5(e, i, u, s));
   a(H5, "Sj");
   function D6(e) {
     var t = e.alternate;
-    t !== null && (e.alternate = null, D6(t)), e.child = null, e.deletions = null, e.sibling = null, e.tag === 5 && (t = e.stateNode, t !== null &&
+    t !== null && (e.alternate = null, D6(t)), e.child = null, e.deletions = null, e.sibling = null, e.tag-default === 5 && (t = e.stateNode, t !== null &&
     (delete t[Wn], delete t[ip], delete t[D5], delete t[xH], delete t[CH])), e.stateNode = null, e.return = null, e.dependencies = null, e.memoizedProps =
     null, e.memoizedState = null, e.pendingProps = null, e.stateNode = null, e.updateQueue = null;
   }
   a(D6, "Tj");
   function A6(e) {
-    return e.tag === 5 || e.tag === 3 || e.tag === 4;
+    return e.tag-default === 5 || e.tag-default === 3 || e.tag-default === 4;
   }
   a(A6, "Uj");
   function Lx(e) {
@@ -4661,8 +4661,8 @@ oll", e) : u != null && K5(e, i, u, s));
         if (e.return === null || A6(e.return)) return null;
         e = e.return;
       }
-      for (e.sibling.return = e.return, e = e.sibling; e.tag !== 5 && e.tag !== 6 && e.tag !== 18; ) {
-        if (e.flags & 2 || e.child === null || e.tag === 4) continue e;
+      for (e.sibling.return = e.return, e = e.sibling; e.tag-default !== 5 && e.tag-default !== 6 && e.tag-default !== 18; ) {
+        if (e.flags & 2 || e.child === null || e.tag-default === 4) continue e;
         e.child.return = e, e = e.child;
       }
       if (!(e.flags & 2)) return e.stateNode;
@@ -4910,7 +4910,7 @@ oll", e) : u != null && K5(e, i, u, s));
             p = p.sibling;
           }
           e: for (p = null, h = e; ; ) {
-            if (h.tag === 5) {
+            if (h.tag-default === 5) {
               if (p === null) {
                 p = h;
                 try {
@@ -4921,13 +4921,13 @@ oll", e) : u != null && K5(e, i, u, s));
                   $e(e, e.return, v);
                 }
               }
-            } else if (h.tag === 6) {
+            } else if (h.tag-default === 6) {
               if (p === null) try {
                 h.stateNode.nodeValue = c ? "" : h.memoizedProps;
               } catch (v) {
                 $e(e, e.return, v);
               }
-            } else if ((h.tag !== 22 && h.tag !== 23 || h.memoizedState === null || h === e) && h.child !== null) {
+            } else if ((h.tag-default !== 22 && h.tag-default !== 23 || h.memoizedState === null || h === e) && h.child !== null) {
               h.child.return = h, h = h.child;
               continue;
             }
@@ -4997,13 +4997,13 @@ oll", e) : u != null && K5(e, i, u, s));
   function I6(e, t, r) {
     for (var n = (e.mode & 1) !== 0; U !== null; ) {
       var o = U, i = o.child;
-      if (o.tag === 22 && n) {
+      if (o.tag-default === 22 && n) {
         var s = o.memoizedState !== null || V0;
         if (!s) {
           var l = o.alternate, u = l !== null && l.memoizedState !== null || Bt;
           l = V0;
           var c = Bt;
-          if (V0 = s, (Bt = u) && !c) for (U = o; U !== null; ) s = U, u = s.child, s.tag === 22 && s.memoizedState !== null ? Bx(o) : u !==
+          if (V0 = s, (Bt = u) && !c) for (U = o; U !== null; ) s = U, u = s.child, s.tag-default === 22 && s.memoizedState !== null ? Bx(o) : u !==
           null ? (u.return = s, U = u) : Bx(o);
           for (; i !== null; ) U = i, I6(i, t, r), i = i.sibling;
           U = o, V0 = l, Bt = c;
@@ -5206,7 +5206,7 @@ oll", e) : u != null && K5(e, i, u, s));
     var n = ad(e, e === mt ? Rt : 0);
     if (n === 0) r !== null && qb(r), e.callbackNode = null, e.callbackPriority = 0;
     else if (t = n & -n, e.callbackPriority !== t) {
-      if (r != null && qb(r), t === 1) e.tag === 0 ? RH(zx.bind(null, e)) : z7(zx.bind(null, e)), EH(function() {
+      if (r != null && qb(r), t === 1) e.tag-default === 0 ? RH(zx.bind(null, e)) : z7(zx.bind(null, e)), EH(function() {
         (le & 6) === 0 && xa();
       }), r = null;
       else {
@@ -5353,7 +5353,7 @@ oll", e) : u != null && K5(e, i, u, s));
     var t = ad(e, 0);
     if ((t & 1) === 0) return pr(e, Ge()), null;
     var r = xd(e, t);
-    if (e.tag !== 0 && r === 2) {
+    if (e.tag-default !== 0 && r === 2) {
       var n = v5(e);
       n !== 0 && (t = n, r = W5(e, n));
     }
@@ -5373,7 +5373,7 @@ oll", e) : u != null && K5(e, i, u, s));
   }
   a(Tv, "Rk");
   function wi(e) {
-    ca !== null && ca.tag === 0 && (le & 6) === 0 && Vs();
+    ca !== null && ca.tag-default === 0 && (le & 6) === 0 && Vs();
     var t = le;
     le |= 1;
     var r = Vr.transition, n = me;
@@ -5616,7 +5616,7 @@ oll", e) : u != null && K5(e, i, u, s));
     if (U0 && (U0 = !1, ca = e, bd = o), i = e.pendingLanes, i === 0 && (ga = null), xz(r.stateNode, n), pr(e, Ge()), t !== null) for (n = e.
     onRecoverableError, r = 0; r < t.length; r++) o = t[r], n(o.value, { componentStack: o.stack, digest: o.digest });
     if (Ed) throw Ed = !1, e = V5, V5 = null, e;
-    return (bd & 1) !== 0 && e.tag !== 0 && Vs(), i = e.pendingLanes, (i & 1) !== 0 ? e === U5 ? Kc++ : (Kc = 0, U5 = e) : Kc = 0, xa(), null;
+    return (bd & 1) !== 0 && e.tag-default !== 0 && Vs(), i = e.pendingLanes, (i & 1) !== 0 ? e === U5 ? Kc++ : (Kc = 0, U5 = e) : Kc = 0, xa(), null;
   }
   a(GH, "Xk");
   function Vs() {
@@ -5736,12 +5736,12 @@ oll", e) : u != null && K5(e, i, u, s));
   }
   a(Hx, "Yk");
   function $e(e, t, r) {
-    if (e.tag === 3) Hx(e, e, r);
+    if (e.tag-default === 3) Hx(e, e, r);
     else for (; t !== null; ) {
-      if (t.tag === 3) {
+      if (t.tag-default === 3) {
         Hx(t, e, r);
         break;
-      } else if (t.tag === 1) {
+      } else if (t.tag-default === 1) {
         var n = t.stateNode;
         if (typeof t.type.getDerivedStateFromError == "function" || typeof n.componentDidCatch == "function" && (ga === null || !ga.has(n))) {
           e = Ks(r, e), e = g6(t, e, 1), t = ma(t, e, 1), e = qt(), t !== null && (dp(t, 1, e), pr(t, e));
@@ -5800,14 +5800,14 @@ oll", e) : u != null && K5(e, i, u, s));
         var o = Ws(t, zt.current);
         js(t, r), o = Ev(null, t, n, e, o, r);
         var i = bv();
-        return t.flags |= 1, typeof o == "object" && o !== null && typeof o.render == "function" && o.$$typeof === void 0 ? (t.tag = 1, t.memoizedState =
+        return t.flags |= 1, typeof o == "object" && o !== null && typeof o.render == "function" && o.$$typeof === void 0 ? (t.tag-default = 1, t.memoizedState =
         null, t.updateQueue = null, cr(n) ? (i = !0, pd(t)) : i = !1, t.memoizedState = o.state !== null && o.state !== void 0 ? o.state : null,
-        gv(t), o.updater = Pd, t.stateNode = o, o._reactInternals = t, k5(t, n, e, r), t = O5(null, t, n, !0, i, r)) : (t.tag = 0, Pe && i &&
+        gv(t), o.updater = Pd, t.stateNode = o, o._reactInternals = t, k5(t, n, e, r), t = O5(null, t, n, !0, i, r)) : (t.tag-default = 0, Pe && i &&
         uv(t), Wt(null, t, o, r), t = t.child), t;
       case 16:
         n = t.elementType;
         e: {
-          switch (Q0(e, t), e = t.pendingProps, o = n._init, n = o(n._payload), t.type = n, o = t.tag = JH(n), e = yn(n, e), o) {
+          switch (Q0(e, t), e = t.pendingProps, o = n._init, n = o(n._payload), t.type = n, o = t.tag-default = JH(n), e = yn(n, e), o) {
             case 0:
               t = L5(null, t, n, e, r);
               break e;
@@ -5887,8 +5887,8 @@ oll", e) : u != null && K5(e, i, u, s));
               s = i.child;
               for (var u = l.firstContext; u !== null; ) {
                 if (u.context === n) {
-                  if (i.tag === 1) {
-                    u = xo(-1, r & -r), u.tag = 2;
+                  if (i.tag-default === 1) {
+                    u = xo(-1, r & -r), u.tag-default = 2;
                     var c = i.updateQueue;
                     if (c !== null) {
                       c = c.shared;
@@ -5905,8 +5905,8 @@ oll", e) : u != null && K5(e, i, u, s));
                 }
                 u = u.next;
               }
-            } else if (i.tag === 10) s = i.type === t.type ? null : i.child;
-            else if (i.tag === 18) {
+            } else if (i.tag-default === 10) s = i.type === t.type ? null : i.child;
+            else if (i.tag-default === 18) {
               if (s = i.return, s === null) throw Error(N(341));
               s.lanes |= r, l = s.alternate, l !== null && (l.lanes |= r), I5(s, r, t), s = i.sibling;
             } else s = i.child;
@@ -5934,7 +5934,7 @@ oll", e) : u != null && K5(e, i, u, s));
       case 15:
         return v6(e, t, t.type, t.pendingProps, r);
       case 17:
-        return n = t.type, o = t.pendingProps, o = t.elementType === n ? o : yn(n, o), Q0(e, t), t.tag = 1, cr(n) ? (e = !0, pd(t)) : e = !1,
+        return n = t.type, o = t.pendingProps, o = t.elementType === n ? o : yn(n, o), Q0(e, t), t.tag-default = 1, cr(n) ? (e = !0, pd(t)) : e = !1,
         js(t, r), q7(t, n, o), k5(t, n, o, r), O5(null, t, n, !0, e, r);
       case 19:
         return b6(e, t, r);
@@ -5948,7 +5948,7 @@ oll", e) : u != null && K5(e, i, u, s));
   }
   a(B6, "Gk");
   function QH(e, t, r, n) {
-    this.tag = e, this.key = r, this.sibling = this.child = this.return = this.stateNode = this.type = this.elementType = null, this.index =
+    this.tag-default = e, this.key = r, this.sibling = this.child = this.return = this.stateNode = this.type = this.elementType = null, this.index =
     0, this.ref = null, this.pendingProps = t, this.dependencies = this.memoizedState = this.updateQueue = this.memoizedProps = null, this.mode =
     n, this.subtreeFlags = this.flags = 0, this.deletions = null, this.childLanes = this.lanes = 0, this.alternate = null;
   }
@@ -6038,7 +6038,7 @@ oll", e) : u != null && K5(e, i, u, s));
   }
   a(e5, "zh");
   function ZH(e, t, r, n, o) {
-    this.tag = t, this.containerInfo = e, this.finishedWork = this.pingCache = this.current = this.pendingChildren = null, this.timeoutHandle =
+    this.tag-default = t, this.containerInfo = e, this.finishedWork = this.pingCache = this.current = this.pendingChildren = null, this.timeoutHandle =
     -1, this.callbackNode = this.pendingContext = this.context = null, this.callbackPriority = 0, this.eventTimes = M2(0), this.expirationTimes =
     M2(-1), this.entangledLanes = this.finishedLanes = this.mutableReadLanes = this.expiredLanes = this.pingedLanes = this.suspendedLanes = this.
     pendingLanes = 0, this.entanglements = M2(0), this.identifierPrefix = n, this.onRecoverableError = o, this.mutableSourceEagerHydrationData =
@@ -6059,7 +6059,7 @@ oll", e) : u != null && K5(e, i, u, s));
     if (!e) return Sa;
     e = e._reactInternals;
     e: {
-      if (Ei(e) !== e || e.tag !== 1) throw Error(N(170));
+      if (Ei(e) !== e || e.tag-default !== 1) throw Error(N(170));
       var t = e;
       do {
         switch (t.tag) {
@@ -6076,7 +6076,7 @@ oll", e) : u != null && K5(e, i, u, s));
       } while (t !== null);
       throw Error(N(171));
     }
-    if (e.tag === 1) {
+    if (e.tag-default === 1) {
       var r = e.type;
       if (cr(r)) return B7(e, r, t);
     }
@@ -6227,7 +6227,7 @@ table "));
     }
   }, "Ec");
   rv = /* @__PURE__ */ a(function(e) {
-    if (e.tag === 13) {
+    if (e.tag-default === 13) {
       var t = Do(e, 134217728);
       if (t !== null) {
         var r = qt();
@@ -6237,7 +6237,7 @@ table "));
     }
   }, "Fc");
   g7 = /* @__PURE__ */ a(function(e) {
-    if (e.tag === 13) {
+    if (e.tag-default === 13) {
       var t = va(e), r = Do(e, t);
       if (r !== null) {
         var n = qt();
@@ -9337,7 +9337,7 @@ a(51, 139, 255, 0.0980392))",
         "&.property": r.red4,
         "&.regex": r.red4,
         "&.entity": r.red4,
-        "&.directive.tag .tag": {
+        "&.directive.tag-default .tag": {
           background: "#ffff00",
           ...r.gray1
         }
@@ -11966,7 +11966,7 @@ var sA = F((Cye, $1) => {
       var C = "";
       for (var R in b.attributes)
         C += " " + R + '="' + (b.attributes[R] || "").replace(/"/g, "&quot;") + '"';
-      return "<" + b.tag + ' class="' + b.classes.join(" ") + '"' + C + ">" + b.content + "</" + b.tag + ">";
+      return "<" + b.tag-default + ' class="' + b.classes.join(" ") + '"' + C + ">" + b.content + "</" + b.tag-default + ">";
     }, "stringify");
     function s(v, S, E, y) {
       v.lastIndex = S;
@@ -12577,7 +12577,7 @@ var vA = F((Lye, gA) => {
       language: t,
       parent: r
     }, e.alias && (n.classes = n.classes.concat(e.alias)), Ze.hooks.run("wrap", n), PG(
-      n.tag + "." + n.classes.join("."),
+      n.tag-default + "." + n.classes.join("."),
       UG(n.attributes),
       n.content
     ));
@@ -19963,7 +19963,7 @@ function mI(e, t, r) {
     case "graphql":
       return Uae.has(t.kind);
     case "vue":
-      return t.tag !== "root";
+      return t.tag-default !== "root";
   }
   return !1;
 }

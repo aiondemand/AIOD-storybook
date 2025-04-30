@@ -43,7 +43,7 @@ import{f as L}from"./index-BDOojamX.js";const R=({title:a,date:n,category:c,vari
                   ${b?`
                      
                      <div class="tag-container">
-                        <span class="tag">${b}</span>
+                        <span class="tag-default">${b}</span>
                      </div>`:""}
                   ${n?`
                      <div class="btn-icon">
