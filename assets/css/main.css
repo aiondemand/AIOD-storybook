@@ -11116,7 +11116,7 @@ h6, .h6 {
   border-color: #41B6E6;
   color: #41B6E6;
 }
-.card-news .tag-container .tag::before {
+.card-news .tag-container .tag-default::before {
   background: transparent;
 }
 .card-news:hover {
@@ -11690,7 +11690,7 @@ h4.text-blue {
     margin-bottom: 40px;
   }
 }
-.tag:before {
+.tag-default:before {
   content: "";
   position: absolute;
   inset: 0;
